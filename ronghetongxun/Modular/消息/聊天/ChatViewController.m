@@ -306,11 +306,13 @@
     if (_addScheduleMenuItem == nil) {
         _addScheduleMenuItem = [[UIMenuItem alloc] initWithTitle:@"添加到日程" action:@selector(addScheduleAction:)];
     }
-    
+    if (_recallMenuItem == nil) {
+        _recallMenuItem = [[UIMenuItem alloc] initWithTitle:@"撤回" action:@selector(recallMessage:)];
+    }
     if (messageModel.isSender) {
         
-        [[UIMenuController sharedMenuController] setMenuItems:@[_copyMenuItem,_deleteMenuItem,_forwardMenuItem,_addScheduleMenuItem]];
-        
+        [[UIMenuController sharedMenuController] setMenuItems:@[_copyMenuItem,_deleteMenuItem,_forwardMenuItem,_recallMenuItem,_addScheduleMenuItem]];
+
     } else {
         [[UIMenuController sharedMenuController] setMenuItems:@[_copyMenuItem,_deleteMenuItem,_forwardMenuItem,_addScheduleMenuItem]];
     }
@@ -331,6 +333,10 @@
 - (void)addScheduleAction:(UIMenuItem *)copyMenuItem{
     
     NSLog(@"添加到日程!");
+}
+- (void)recallMessage:(UIMenuItem *)recallMuneItem
+{
+    NSLog(@"撤回");
 }
 - (void)copyMessage:(UIMenuItem *)copyMenuItem
 {

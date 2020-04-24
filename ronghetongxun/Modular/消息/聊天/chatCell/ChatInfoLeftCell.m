@@ -22,7 +22,8 @@
     return self;
 }
 - (void)setMessageModel:(ICMessage *)messageModel{
-    
+    [super setMessageModel:messageModel];
+
     self.contentLab.text = messageModel.content;
     
     switch (messageModel.deliveryState) {
