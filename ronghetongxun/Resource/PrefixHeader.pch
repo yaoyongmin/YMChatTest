@@ -1,0 +1,28 @@
+//
+//  PrefixHeader.pch
+//  ronghetongxun
+//
+//  Created by yym on 2020/4/13.
+//  Copyright © 2020 DongDu Technology Co., Ltd. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UserConfig.h"
+#import "YMRequest.h"
+#import "MBProgressHUD+YM.h"
+#import "YMUtils.h"
+
+#define WeakSelf __weak typeof(self) weakSelf = self;
+
+#define YMPerformSelectorMacro(class,action)\
+({\
+    if (!self) { return; }\
+    IMP imp = [self methodForSelector:NSSelectorFromString(action)];\
+    void (*func)(id, SEL) = (void *)imp;\
+    func(self, NSSelectorFromString(action));\
+})
+
+
+#endif /* PrefixHeader_pch */

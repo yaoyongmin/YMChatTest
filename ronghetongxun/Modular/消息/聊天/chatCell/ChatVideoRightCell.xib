@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="104" id="Xzf-ed-uwe" customClass="ChatVideoRightCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="Xzf-ed-uwe" id="b4p-Dw-wmv">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n0V-cW-Hgf">
+                        <rect key="frame" x="274" y="10" width="30" height="30"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="2Uo-iL-gfn"/>
+                            <constraint firstAttribute="width" constant="30" id="iGo-ES-aRP"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_chat_backGroup-1" translatesAutoresizingMaskIntoConstraints="NO" id="6ki-z3-Qoe">
+                        <rect key="frame" x="149" y="5" width="120" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="E4V-im-6wR"/>
+                            <constraint firstAttribute="width" constant="120" id="GFn-nU-0pV"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qkp-BJ-qhQ">
+                        <rect key="frame" x="154" y="10" width="105" height="70"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="播放" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWB-rQ-ygr">
+                        <rect key="frame" x="189" y="34.5" width="35" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.96862745100000003" green="0.97254901959999995" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="6ki-z3-Qoe" firstAttribute="top" secondItem="b4p-Dw-wmv" secondAttribute="top" constant="5" id="0Wp-uC-vdU"/>
+                    <constraint firstItem="n0V-cW-Hgf" firstAttribute="leading" secondItem="6ki-z3-Qoe" secondAttribute="trailing" constant="5" id="9x2-iL-xbh"/>
+                    <constraint firstItem="UWB-rQ-ygr" firstAttribute="centerY" secondItem="qkp-BJ-qhQ" secondAttribute="centerY" id="B9k-v9-rmi"/>
+                    <constraint firstItem="qkp-BJ-qhQ" firstAttribute="bottom" secondItem="6ki-z3-Qoe" secondAttribute="bottom" constant="-5" id="EhH-XL-Ol8"/>
+                    <constraint firstItem="UWB-rQ-ygr" firstAttribute="centerX" secondItem="qkp-BJ-qhQ" secondAttribute="centerX" id="SpV-R5-fX9"/>
+                    <constraint firstItem="qkp-BJ-qhQ" firstAttribute="trailing" secondItem="6ki-z3-Qoe" secondAttribute="trailing" constant="-10" id="Udr-jN-qM4"/>
+                    <constraint firstAttribute="bottom" secondItem="6ki-z3-Qoe" secondAttribute="bottom" constant="10" id="Xhq-Z3-GUs"/>
+                    <constraint firstItem="qkp-BJ-qhQ" firstAttribute="top" secondItem="6ki-z3-Qoe" secondAttribute="top" constant="5" id="gbu-kR-gDp"/>
+                    <constraint firstItem="qkp-BJ-qhQ" firstAttribute="leading" secondItem="6ki-z3-Qoe" secondAttribute="leading" constant="5" id="pp0-Ib-1IH"/>
+                    <constraint firstAttribute="trailing" secondItem="n0V-cW-Hgf" secondAttribute="trailing" constant="16" id="snC-Ni-ggF"/>
+                    <constraint firstItem="n0V-cW-Hgf" firstAttribute="top" secondItem="b4p-Dw-wmv" secondAttribute="top" constant="10" id="v9S-mI-NFe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.96862745100000003" green="0.97254901959999995" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <viewLayoutGuide key="safeArea" id="IsJ-qE-dNC"/>
+            <connections>
+                <outlet property="videoPhotoView" destination="qkp-BJ-qhQ" id="vhF-3G-DfF"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="169.41964285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_chat_backGroup-1" width="54" height="39.5"/>
+    </resources>
+</document>

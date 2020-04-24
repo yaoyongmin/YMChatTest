@@ -1,0 +1,6 @@
+framework module Pods_ronghetongxun {
+  umbrella header "Pods-ronghetongxun-umbrella.h"
+
+  export *
+  module * { export * }
+}

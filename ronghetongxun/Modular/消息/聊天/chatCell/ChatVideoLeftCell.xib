@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="97" id="gVU-2I-Pf2" customClass="ChatVideoLeftCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="gVU-2I-Pf2" id="jYp-ZX-EIp">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fph-ak-9TZ">
+                        <rect key="frame" x="16" y="10" width="30" height="30"/>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="Exo-jH-5n1"/>
+                            <constraint firstAttribute="width" constant="30" id="dsv-3E-yqK"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_chat_backGroup" translatesAutoresizingMaskIntoConstraints="NO" id="yfo-ea-HV4">
+                        <rect key="frame" x="51" y="5" width="120" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="1hY-u2-nGC"/>
+                            <constraint firstAttribute="height" constant="80" id="dbP-Yo-Wwz"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="giC-SS-tVL">
+                        <rect key="frame" x="66" y="10" width="100" height="70"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="播放" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXp-yg-Bc4">
+                        <rect key="frame" x="98.5" y="34.5" width="35" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.96862745100000003" green="0.97254901959999995" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="yfo-ea-HV4" secondAttribute="bottom" constant="10" id="1IE-H3-LEe"/>
+                    <constraint firstItem="giC-SS-tVL" firstAttribute="bottom" secondItem="yfo-ea-HV4" secondAttribute="bottom" constant="-5" id="709-v8-6vM"/>
+                    <constraint firstItem="MXp-yg-Bc4" firstAttribute="centerY" secondItem="giC-SS-tVL" secondAttribute="centerY" id="BSz-Ml-cKn"/>
+                    <constraint firstItem="yfo-ea-HV4" firstAttribute="top" secondItem="jYp-ZX-EIp" secondAttribute="top" constant="5" id="DXW-Qz-5a7"/>
+                    <constraint firstItem="Fph-ak-9TZ" firstAttribute="top" secondItem="jYp-ZX-EIp" secondAttribute="top" constant="10" id="IjW-9g-cTB"/>
+                    <constraint firstItem="giC-SS-tVL" firstAttribute="top" secondItem="yfo-ea-HV4" secondAttribute="top" constant="5" id="V1l-Cv-m3i"/>
+                    <constraint firstItem="giC-SS-tVL" firstAttribute="leading" secondItem="yfo-ea-HV4" secondAttribute="leading" constant="15" id="Xho-5X-cFF"/>
+                    <constraint firstItem="Fph-ak-9TZ" firstAttribute="leading" secondItem="jYp-ZX-EIp" secondAttribute="leading" constant="16" id="eI6-Xx-krb"/>
+                    <constraint firstItem="giC-SS-tVL" firstAttribute="trailing" secondItem="yfo-ea-HV4" secondAttribute="trailing" constant="-5" id="gxI-4e-WTp"/>
+                    <constraint firstItem="MXp-yg-Bc4" firstAttribute="centerX" secondItem="giC-SS-tVL" secondAttribute="centerX" id="okH-IR-cLL"/>
+                    <constraint firstItem="yfo-ea-HV4" firstAttribute="leading" secondItem="Fph-ak-9TZ" secondAttribute="trailing" constant="5" id="pRk-wb-8BC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="LBF-JE-Bbe"/>
+            <connections>
+                <outlet property="videoPhotoView" destination="giC-SS-tVL" id="KXZ-pX-Ndx"/>
+            </connections>
+            <point key="canvasLocation" x="124.6376811594203" y="141.62946428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_chat_backGroup" width="55" height="40"/>
+    </resources>
+</document>

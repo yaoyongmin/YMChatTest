@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatViewController">
+            <connections>
+                <outlet property="emojiBtn" destination="LlO-nY-U7E" id="Fkc-PL-3nP"/>
+                <outlet property="tableView" destination="XGo-7w-qx0" id="uDD-QG-px5"/>
+                <outlet property="textField" destination="hdM-RI-BuQ" id="bLV-4O-UO9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="voiceBtn" destination="cWW-A4-65L" id="cfA-1S-7he"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OZb-H1-YMS">
+                    <rect key="frame" x="0.0" y="817" width="414" height="45"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWW-A4-65L">
+                            <rect key="frame" x="10" y="10.5" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="PzC-Bg-3Is"/>
+                                <constraint firstAttribute="height" constant="24" id="oCJ-9D-Qbx"/>
+                            </constraints>
+                            <state key="normal" image="icon_chat_voice"/>
+                            <connections>
+                                <action selector="voiceAction:" destination="-1" eventType="touchUpInside" id="roX-Vj-MV7"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hdM-RI-BuQ">
+                            <rect key="frame" x="44" y="7.5" width="276" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="0Mp-sh-GDB"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="send"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="OdL-kr-R9g"/>
+                            </connections>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xe2-M4-hr5">
+                            <rect key="frame" x="379" y="10" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="Y4o-Gp-bWZ"/>
+                                <constraint firstAttribute="width" constant="25" id="sJE-8l-CkE"/>
+                            </constraints>
+                            <state key="normal" image="icon_chat_more"/>
+                            <connections>
+                                <action selector="moreAction:" destination="-1" eventType="touchUpInside" id="i2E-iM-6WB"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LlO-nY-U7E">
+                            <rect key="frame" x="335" y="10.5" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="Ffk-wN-JfQ"/>
+                                <constraint firstAttribute="width" constant="24" id="HIU-wv-D0M"/>
+                            </constraints>
+                            <state key="normal" image="icon_chat_emoji"/>
+                            <connections>
+                                <action selector="emojiAction:" destination="-1" eventType="touchUpInside" id="EBX-IQ-0Tj"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Xe2-M4-hr5" firstAttribute="centerY" secondItem="OZb-H1-YMS" secondAttribute="centerY" id="9LA-2f-ztJ"/>
+                        <constraint firstItem="cWW-A4-65L" firstAttribute="centerY" secondItem="OZb-H1-YMS" secondAttribute="centerY" id="9ND-Gm-wx1"/>
+                        <constraint firstItem="hdM-RI-BuQ" firstAttribute="centerY" secondItem="OZb-H1-YMS" secondAttribute="centerY" id="MOV-jW-Gxa"/>
+                        <constraint firstAttribute="trailing" secondItem="Xe2-M4-hr5" secondAttribute="trailing" constant="10" id="PBx-Oa-nWo"/>
+                        <constraint firstItem="LlO-nY-U7E" firstAttribute="centerY" secondItem="OZb-H1-YMS" secondAttribute="centerY" id="Rna-Cl-wkN"/>
+                        <constraint firstItem="cWW-A4-65L" firstAttribute="leading" secondItem="OZb-H1-YMS" secondAttribute="leading" constant="10" id="ZFV-R9-r7p"/>
+                        <constraint firstAttribute="height" constant="45" id="fg4-Pv-V4C"/>
+                        <constraint firstItem="Xe2-M4-hr5" firstAttribute="leading" secondItem="LlO-nY-U7E" secondAttribute="trailing" constant="20" id="lqE-Rt-dx9"/>
+                        <constraint firstItem="LlO-nY-U7E" firstAttribute="leading" secondItem="hdM-RI-BuQ" secondAttribute="trailing" constant="15" id="rmn-tz-AVp"/>
+                        <constraint firstItem="hdM-RI-BuQ" firstAttribute="leading" secondItem="cWW-A4-65L" secondAttribute="trailing" constant="10" id="y2O-gd-rAa"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XGo-7w-qx0">
+                    <rect key="frame" x="0.0" y="88" width="414" height="729"/>
+                    <color key="backgroundColor" red="0.96862745098039216" green="0.97254901960784312" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="fcy-lw-JXl"/>
+                        <outlet property="delegate" destination="-1" id="phV-en-Dv6"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="OZb-H1-YMS" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="0K0-Rb-XfZ"/>
+                <constraint firstItem="OZb-H1-YMS" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="6ma-9I-4DP"/>
+                <constraint firstItem="XGo-7w-qx0" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="GLD-U8-2mO"/>
+                <constraint firstItem="OZb-H1-YMS" firstAttribute="top" secondItem="XGo-7w-qx0" secondAttribute="bottom" id="PlR-zO-kDO"/>
+                <constraint firstItem="XGo-7w-qx0" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="gvE-Ei-R2D"/>
+                <constraint firstItem="OZb-H1-YMS" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="qu6-4T-omX"/>
+                <constraint firstItem="XGo-7w-qx0" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="u4h-5K-lS3"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="131.8840579710145" y="132.58928571428572"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_chat_emoji" width="24" height="23.5"/>
+        <image name="icon_chat_more" width="24.5" height="24.5"/>
+        <image name="icon_chat_voice" width="24" height="24"/>
+    </resources>
+</document>
