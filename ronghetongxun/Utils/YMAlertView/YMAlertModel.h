@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 ///对齐方式
 @property(nonatomic) UIControlContentHorizontalAlignment contentHorizontalAlignment;
 
+@property(nonatomic, strong) UIColor *itemTitleColor;
+
 @end
 
 NS_ASSUME_NONNULL_END

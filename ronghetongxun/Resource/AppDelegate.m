@@ -19,13 +19,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    
-//    self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
-    
     self.window.backgroundColor = [UIColor whiteColor];
     
     if (![UserConfig kIsLogin]) {
-        
         self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController: [[LoginViewController alloc]init]];
     }else{
         self.window.rootViewController = [[RootTabBarController alloc]init];

@@ -38,14 +38,18 @@
 		041D589424401B1600FD2120 /* BaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 041D589224401B1600FD2120 /* BaseTabBar.m */; };
 		041D589B2440250900FD2120 /* MailListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041D58992440250900FD2120 /* MailListViewController.m */; };
 		041D589C2440250900FD2120 /* MailListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041D589A2440250900FD2120 /* MailListViewController.xib */; };
-		041D58A02440254A00FD2120 /* CallRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041D589E2440254A00FD2120 /* CallRecordViewController.m */; };
-		041D58A12440254A00FD2120 /* CallRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041D589F2440254A00FD2120 /* CallRecordViewController.xib */; };
-		041D58A52440257800FD2120 /* DialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041D58A32440257800FD2120 /* DialViewController.m */; };
-		041D58A62440257800FD2120 /* DialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041D58A42440257800FD2120 /* DialViewController.xib */; };
 		04457324244939B000BAD04F /* YMRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04457323244939B000BAD04F /* YMRequest.m */; };
 		0445732724493AF400BAD04F /* YMFileParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445732624493AF400BAD04F /* YMFileParam.m */; };
 		0445732E24493CB800BAD04F /* MBProgressHUD+YM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445732D24493CB800BAD04F /* MBProgressHUD+YM.m */; };
 		0445733124494C2E00BAD04F /* YMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445733024494C2E00BAD04F /* YMUtils.m */; };
+		0445E90F2457DCE900DA618D /* BaseTableVIewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445E90E2457DCE900DA618D /* BaseTableVIewController.m */; };
+		0445E91224581D9700DA618D /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445E91124581D9700DA618D /* ScheduleViewController.m */; };
+		0445E9162458296D00DA618D /* ScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445E9142458296D00DA618D /* ScheduleCell.m */; };
+		0445E9172458296D00DA618D /* ScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0445E9152458296D00DA618D /* ScheduleCell.xib */; };
+		0445E91C2458310C00DA618D /* CreateTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445E91A2458310C00DA618D /* CreateTripViewController.m */; };
+		0445E91D2458310C00DA618D /* CreateTripViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0445E91B2458310C00DA618D /* CreateTripViewController.xib */; };
+		0445E9212458315000DA618D /* VideoMeetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445E91F2458315000DA618D /* VideoMeetingViewController.m */; };
+		0445E9222458315000DA618D /* VideoMeetingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0445E9202458315000DA618D /* VideoMeetingViewController.xib */; };
 		044D6755244E7E3200915BD0 /* AddContactPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044D6753244E7E3200915BD0 /* AddContactPersonViewController.m */; };
 		044D6756244E7E3200915BD0 /* AddContactPersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044D6754244E7E3200915BD0 /* AddContactPersonViewController.xib */; };
 		044D675A244E85B000915BD0 /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044D6758244E85B000915BD0 /* UserInfoViewController.m */; };
@@ -55,6 +59,17 @@
 		044D6763244E9CC800915BD0 /* YMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 044D6762244E9CC800915BD0 /* YMAlertView.m */; };
 		044D6766244E9CE400915BD0 /* YMAlertModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 044D6765244E9CE400915BD0 /* YMAlertModel.m */; };
 		044D6769244EA01200915BD0 /* YMAlertViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 044D6768244EA01200915BD0 /* YMAlertViewCell.m */; };
+		045539E42456631900135460 /* UIImage+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 045539E32456631900135460 /* UIImage+Extend.m */; };
+		045539EF2456807A00135460 /* ChatVoiceLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 045539ED2456807A00135460 /* ChatVoiceLeftCell.m */; };
+		045539F02456807A00135460 /* ChatVoiceLeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045539EE2456807A00135460 /* ChatVoiceLeftCell.xib */; };
+		045539F42456808900135460 /* ChatVoiceRightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 045539F22456808900135460 /* ChatVoiceRightCell.m */; };
+		045539F52456808900135460 /* ChatVoiceRightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045539F32456808900135460 /* ChatVoiceRightCell.xib */; };
+		045539FB24568EC200135460 /* ICFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 045539F924568EC100135460 /* ICFileTool.m */; };
+		045539FC2456A87400135460 /* ICRecordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 045539F624568E8D00135460 /* ICRecordManager.m */; };
+		04553A0C2456AC7100135460 /* VoiceConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 04553A012456AC7100135460 /* VoiceConverter.mm */; };
+		04553A0D2456AC7100135460 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04553A032456AC7100135460 /* libopencore-amrwb.a */; };
+		04553A0E2456AC7100135460 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04553A042456AC7100135460 /* libopencore-amrnb.a */; };
+		04553A0F2456AC7100135460 /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 04553A0A2456AC7100135460 /* amrFileCodec.mm */; };
 		0466EFD3244545B200FDF511 /* SelectContactsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0466EFD2244545B200FDF511 /* SelectContactsHeaderView.m */; };
 		0466EFD624454CC300FDF511 /* SelectContactsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0466EFD524454CC300FDF511 /* SelectContactsCell.m */; };
 		0466EFDB24458C9800FDF511 /* MessageSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0466EFD924458C9800FDF511 /* MessageSearchVC.m */; };
@@ -108,12 +123,34 @@
 		0478CF2C2452D03E0073F86E /* GroupPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0478CF2A2452D03E0073F86E /* GroupPhotoCell.xib */; };
 		0478CF2F2452D1760073F86E /* GroupPhotoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478CF2E2452D1760073F86E /* GroupPhotoHeaderView.m */; };
 		04856E2B245037FC00578E76 /* ICMessageConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 04856E2A245037FC00578E76 /* ICMessageConst.m */; };
+		0491183A2455586000145DE3 /* GroupMemberListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049118392455586000145DE3 /* GroupMemberListVC.xib */; };
+		0491183E24555C4700145DE3 /* GroupMembersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0491183C24555C4700145DE3 /* GroupMembersCell.m */; };
+		0491183F24555C4700145DE3 /* GroupMembersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0491183D24555C4700145DE3 /* GroupMembersCell.xib */; };
+		04911841245566DF00145DE3 /* friendInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04911840245566DF00145DE3 /* friendInfo.plist */; };
+		04911846245566FF00145DE3 /* ContactDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04911842245566FE00145DE3 /* ContactDataHelper.m */; };
+		04911847245566FF00145DE3 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 04911844245566FE00145DE3 /* NSString+Utils.m */; };
+		0491184A2455671800145DE3 /* FriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 049118492455671800145DE3 /* FriendModel.m */; };
 		0494CBEC2450122000AA0EBF /* ZZYPhotoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0494CBEB2450122000AA0EBF /* ZZYPhotoHelper.m */; };
 		0494CBF0245020E600AA0EBF /* YMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0494CBEF245020E600AA0EBF /* YMUser.m */; };
 		0494CBF3245020F500AA0EBF /* YMGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0494CBF2245020F500AA0EBF /* YMGroup.m */; };
 		0494CBF624502A5100AA0EBF /* ICMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0494CBF524502A5100AA0EBF /* ICMessage.m */; };
 		0494CBF924502B4300AA0EBF /* ICMessageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0494CBF824502B4300AA0EBF /* ICMessageHelper.m */; };
 		0494CBFE2450347200AA0EBF /* BaseChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0494CBFD2450347200AA0EBF /* BaseChatCell.m */; };
+		04985D3424623E42004E2D87 /* UIView+XLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04985D3024623E42004E2D87 /* UIView+XLExtension.m */; };
+		04985D3524623E42004E2D87 /* UIImage+XLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04985D3124623E42004E2D87 /* UIImage+XLExtension.m */; };
+		04985D3624623E42004E2D87 /* XLPasswordInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04985D3224623E42004E2D87 /* XLPasswordInputView.m */; };
+		04985D3924624035004E2D87 /* JoinMeetingPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04985D3824624035004E2D87 /* JoinMeetingPopupView.m */; };
+		04985D3D24625310004E2D87 /* MeetingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04985D3B24625310004E2D87 /* MeetingController.m */; };
+		04985D4224625CEE004E2D87 /* AlreadyJoinedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04985D4024625CEE004E2D87 /* AlreadyJoinedViewController.m */; };
+		04985D4324625CEE004E2D87 /* AlreadyJoinedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04985D4124625CEE004E2D87 /* AlreadyJoinedViewController.xib */; };
+		04985D4724625CFC004E2D87 /* NotJoinedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04985D4524625CFB004E2D87 /* NotJoinedViewController.m */; };
+		04985D4824625CFC004E2D87 /* NotJoinedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04985D4624625CFC004E2D87 /* NotJoinedViewController.xib */; };
+		04985D4C24626B4F004E2D87 /* AlreadyJoinMeetingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04985D4A24626B4F004E2D87 /* AlreadyJoinMeetingCell.m */; };
+		04985D4D24626B4F004E2D87 /* AlreadyJoinMeetingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04985D4B24626B4F004E2D87 /* AlreadyJoinMeetingCell.xib */; };
+		04985D5124626B5F004E2D87 /* NotJoinMeetingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04985D4F24626B5F004E2D87 /* NotJoinMeetingCell.m */; };
+		04985D5224626B5F004E2D87 /* NotJoinMeetingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04985D5024626B5F004E2D87 /* NotJoinMeetingCell.xib */; };
+		04985D5524626F5C004E2D87 /* SecretKeyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04985D5424626F5C004E2D87 /* SecretKeyView.m */; };
+		04985D5724626F70004E2D87 /* SecretKeyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04985D5624626F70004E2D87 /* SecretKeyView.xib */; };
 		04D7275C24484821008C85C6 /* ChatEmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7275B24484821008C85C6 /* ChatEmojiView.m */; };
 		04D72760244848F1008C85C6 /* ChatEmojiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7275E244848F1008C85C6 /* ChatEmojiCell.m */; };
 		04D72761244848F1008C85C6 /* ChatEmojiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D7275F244848F1008C85C6 /* ChatEmojiCell.xib */; };
@@ -121,6 +158,33 @@
 		04D7276624485862008C85C6 /* ChatInfoLeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D7276424485862008C85C6 /* ChatInfoLeftCell.xib */; };
 		04D7276A24485872008C85C6 /* ChatInfoRightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7276824485872008C85C6 /* ChatInfoRightCell.m */; };
 		04D7276B24485872008C85C6 /* ChatInfoRightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D7276924485872008C85C6 /* ChatInfoRightCell.xib */; };
+		04DC3A8D245909AE00B293C4 /* VideoMeetingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DC3A8B245909AE00B293C4 /* VideoMeetingCell.m */; };
+		04DC3A8E245909AE00B293C4 /* VideoMeetingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC3A8C245909AE00B293C4 /* VideoMeetingCell.xib */; };
+		04DC3A94245922F400B293C4 /* UIView+RoundedBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DC3A93245922F400B293C4 /* UIView+RoundedBorder.m */; };
+		04DC3A982459245C00B293C4 /* LaunchMeetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DC3A962459245C00B293C4 /* LaunchMeetingViewController.m */; };
+		04DC3A992459245C00B293C4 /* LaunchMeetingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC3A972459245C00B293C4 /* LaunchMeetingViewController.xib */; };
+		04DC3A9D245924E200B293C4 /* MeetingThemeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DC3A9C245924E200B293C4 /* MeetingThemeView.m */; };
+		04DC3AA12459572F00B293C4 /* LaunchMeetingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DC3AA02459572F00B293C4 /* LaunchMeetingModel.m */; };
+		04DC3AF924597D1900B293C4 /* WorkMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DC3AF724597D1900B293C4 /* WorkMoreViewController.m */; };
+		04DC3AFA24597D1900B293C4 /* WorkMoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DC3AF824597D1900B293C4 /* WorkMoreViewController.xib */; };
+		04DC3B0A245981E400B293C4 /* CXDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DC3B05245981E400B293C4 /* CXDatePickerView.m */; };
+		04DC3B0B245981E400B293C4 /* NSDate+CXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DC3B08245981E400B293C4 /* NSDate+CXCategory.m */; };
+		04DCA37E245A56A20032AD42 /* TelephoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DCA37D245A56A20032AD42 /* TelephoneViewController.xib */; };
+		04DCA382245A5DD20032AD42 /* DialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DCA380245A5DD20032AD42 /* DialViewController.m */; };
+		04DCA383245A5DD20032AD42 /* DialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DCA381245A5DD20032AD42 /* DialViewController.xib */; };
+		04DCA388245A5F5A0032AD42 /* DialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DCA386245A5F5A0032AD42 /* DialCell.m */; };
+		04DCA389245A5F5A0032AD42 /* DialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DCA387245A5F5A0032AD42 /* DialCell.xib */; };
+		04DCA38C245A5F690032AD42 /* DialFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DCA38B245A5F690032AD42 /* DialFlowLayout.m */; };
+		04DCA38F245A6B4D0032AD42 /* CallLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DCA38E245A6B4D0032AD42 /* CallLogViewController.m */; };
+		04DCA393245A71F70032AD42 /* AllCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DCA391245A71F70032AD42 /* AllCallViewController.m */; };
+		04DCA394245A71F70032AD42 /* AllCallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DCA392245A71F70032AD42 /* AllCallViewController.xib */; };
+		04DCA39B245A72380032AD42 /* CallLogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DCA39A245A72380032AD42 /* CallLogViewController.xib */; };
+		04DCA39F245A81890032AD42 /* CallLogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DCA39D245A81890032AD42 /* CallLogCell.m */; };
+		04DCA3A0245A81890032AD42 /* CallLogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DCA39E245A81890032AD42 /* CallLogCell.xib */; };
+		04DCA3A5245AA6F30032AD42 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DCA3A3245AA6F30032AD42 /* MyTableViewCell.m */; };
+		04DCA3A6245AA6F30032AD42 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DCA3A4245AA6F30032AD42 /* MyTableViewCell.xib */; };
+		04DCA3A9245AAC100032AD42 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DCA3A8245AAC100032AD42 /* AboutViewController.m */; };
+		04DCA3AB245AAC210032AD42 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DCA3AA245AAC210032AD42 /* AboutViewController.xib */; };
 		04FD2F6B244FD72E0041A9A9 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD2F69244FD72E0041A9A9 /* QRCodeViewController.m */; };
 		04FD2F6C244FD72E0041A9A9 /* QRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FD2F6A244FD72E0041A9A9 /* QRCodeViewController.xib */; };
 		04FD2F6F244FDD700041A9A9 /* JJDecoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD2F6D244FDD700041A9A9 /* JJDecoderViewController.m */; };
@@ -147,7 +211,7 @@
 		04FD2F9A244FDDD70041A9A9 /* qr_top_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FD2F85244FDDD70041A9A9 /* qr_top_right@2x.png */; };
 		04FD2F9D244FF82E0041A9A9 /* ChatMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD2F9C244FF82E0041A9A9 /* ChatMoreView.m */; };
 		04FD2F9F244FF8840041A9A9 /* ChatMoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FD2F9E244FF8840041A9A9 /* ChatMoreView.xib */; };
-		19D0AD5B7E137DF31248F0A1 /* Pods_ronghetongxun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 085CC10EB45681E39F1BE8DA /* Pods_ronghetongxun.framework */; };
+		E0413A195A7C8AC458C0625C /* Pods_ronghetongxun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373ECEBB86225ED905E36EFD /* Pods_ronghetongxun.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -206,12 +270,6 @@
 		041D58982440250900FD2120 /* MailListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MailListViewController.h; sourceTree = "<group>"; };
 		041D58992440250900FD2120 /* MailListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MailListViewController.m; sourceTree = "<group>"; };
 		041D589A2440250900FD2120 /* MailListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MailListViewController.xib; sourceTree = "<group>"; };
-		041D589D2440254A00FD2120 /* CallRecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallRecordViewController.h; sourceTree = "<group>"; };
-		041D589E2440254A00FD2120 /* CallRecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CallRecordViewController.m; sourceTree = "<group>"; };
-		041D589F2440254A00FD2120 /* CallRecordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CallRecordViewController.xib; sourceTree = "<group>"; };
-		041D58A22440257800FD2120 /* DialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialViewController.h; sourceTree = "<group>"; };
-		041D58A32440257800FD2120 /* DialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialViewController.m; sourceTree = "<group>"; };
-		041D58A42440257800FD2120 /* DialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DialViewController.xib; sourceTree = "<group>"; };
 		04457322244939B000BAD04F /* YMRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMRequest.h; sourceTree = "<group>"; };
 		04457323244939B000BAD04F /* YMRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMRequest.m; sourceTree = "<group>"; };
 		0445732524493AF400BAD04F /* YMFileParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMFileParam.h; sourceTree = "<group>"; };
@@ -222,6 +280,19 @@
 		0445732F24494C2E00BAD04F /* YMUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMUtils.h; sourceTree = "<group>"; };
 		0445733024494C2E00BAD04F /* YMUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMUtils.m; sourceTree = "<group>"; };
 		04457335244952F200BAD04F /* UserConfigKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserConfigKey.h; sourceTree = "<group>"; };
+		0445E90D2457DCE900DA618D /* BaseTableVIewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableVIewController.h; sourceTree = "<group>"; };
+		0445E90E2457DCE900DA618D /* BaseTableVIewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableVIewController.m; sourceTree = "<group>"; };
+		0445E91024581D9700DA618D /* ScheduleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
+		0445E91124581D9700DA618D /* ScheduleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
+		0445E9132458296D00DA618D /* ScheduleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScheduleCell.h; sourceTree = "<group>"; };
+		0445E9142458296D00DA618D /* ScheduleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduleCell.m; sourceTree = "<group>"; };
+		0445E9152458296D00DA618D /* ScheduleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleCell.xib; sourceTree = "<group>"; };
+		0445E9192458310C00DA618D /* CreateTripViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateTripViewController.h; sourceTree = "<group>"; };
+		0445E91A2458310C00DA618D /* CreateTripViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateTripViewController.m; sourceTree = "<group>"; };
+		0445E91B2458310C00DA618D /* CreateTripViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateTripViewController.xib; sourceTree = "<group>"; };
+		0445E91E2458315000DA618D /* VideoMeetingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoMeetingViewController.h; sourceTree = "<group>"; };
+		0445E91F2458315000DA618D /* VideoMeetingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoMeetingViewController.m; sourceTree = "<group>"; };
+		0445E9202458315000DA618D /* VideoMeetingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoMeetingViewController.xib; sourceTree = "<group>"; };
 		044D6752244E7E3200915BD0 /* AddContactPersonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddContactPersonViewController.h; sourceTree = "<group>"; };
 		044D6753244E7E3200915BD0 /* AddContactPersonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddContactPersonViewController.m; sourceTree = "<group>"; };
 		044D6754244E7E3200915BD0 /* AddContactPersonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddContactPersonViewController.xib; sourceTree = "<group>"; };
@@ -237,6 +308,28 @@
 		044D6765244E9CE400915BD0 /* YMAlertModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMAlertModel.m; sourceTree = "<group>"; };
 		044D6767244EA01200915BD0 /* YMAlertViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMAlertViewCell.h; sourceTree = "<group>"; };
 		044D6768244EA01200915BD0 /* YMAlertViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMAlertViewCell.m; sourceTree = "<group>"; };
+		045539E22456631900135460 /* UIImage+Extend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extend.h"; sourceTree = "<group>"; };
+		045539E32456631900135460 /* UIImage+Extend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extend.m"; sourceTree = "<group>"; };
+		045539EC2456807A00135460 /* ChatVoiceLeftCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatVoiceLeftCell.h; sourceTree = "<group>"; };
+		045539ED2456807A00135460 /* ChatVoiceLeftCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatVoiceLeftCell.m; sourceTree = "<group>"; };
+		045539EE2456807A00135460 /* ChatVoiceLeftCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatVoiceLeftCell.xib; sourceTree = "<group>"; };
+		045539F12456808900135460 /* ChatVoiceRightCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatVoiceRightCell.h; sourceTree = "<group>"; };
+		045539F22456808900135460 /* ChatVoiceRightCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatVoiceRightCell.m; sourceTree = "<group>"; };
+		045539F32456808900135460 /* ChatVoiceRightCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatVoiceRightCell.xib; sourceTree = "<group>"; };
+		045539F624568E8D00135460 /* ICRecordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICRecordManager.m; sourceTree = "<group>"; };
+		045539F724568E8D00135460 /* ICRecordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICRecordManager.h; sourceTree = "<group>"; };
+		045539F924568EC100135460 /* ICFileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICFileTool.m; sourceTree = "<group>"; };
+		045539FA24568EC100135460 /* ICFileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICFileTool.h; sourceTree = "<group>"; };
+		045539FF2456AC7100135460 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		04553A002456AC7100135460 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		04553A012456AC7100135460 /* VoiceConverter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VoiceConverter.mm; sourceTree = "<group>"; };
+		04553A032456AC7100135460 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		04553A042456AC7100135460 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		04553A052456AC7100135460 /* VoiceConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceConverter.h; sourceTree = "<group>"; };
+		04553A072456AC7100135460 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		04553A082456AC7100135460 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		04553A0A2456AC7100135460 /* amrFileCodec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = amrFileCodec.mm; sourceTree = "<group>"; };
+		04553A0B2456AC7100135460 /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
 		0466EFD1244545B200FDF511 /* SelectContactsHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectContactsHeaderView.h; sourceTree = "<group>"; };
 		0466EFD2244545B200FDF511 /* SelectContactsHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectContactsHeaderView.m; sourceTree = "<group>"; };
 		0466EFD424454CC300FDF511 /* SelectContactsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectContactsCell.h; sourceTree = "<group>"; };
@@ -330,6 +423,17 @@
 		0478CF2E2452D1760073F86E /* GroupPhotoHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupPhotoHeaderView.m; sourceTree = "<group>"; };
 		04856E29245037FC00578E76 /* ICMessageConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICMessageConst.h; sourceTree = "<group>"; };
 		04856E2A245037FC00578E76 /* ICMessageConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICMessageConst.m; sourceTree = "<group>"; };
+		049118392455586000145DE3 /* GroupMemberListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupMemberListVC.xib; sourceTree = "<group>"; };
+		0491183B24555C4700145DE3 /* GroupMembersCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupMembersCell.h; sourceTree = "<group>"; };
+		0491183C24555C4700145DE3 /* GroupMembersCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupMembersCell.m; sourceTree = "<group>"; };
+		0491183D24555C4700145DE3 /* GroupMembersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupMembersCell.xib; sourceTree = "<group>"; };
+		04911840245566DF00145DE3 /* friendInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = friendInfo.plist; sourceTree = "<group>"; };
+		04911842245566FE00145DE3 /* ContactDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDataHelper.m; sourceTree = "<group>"; };
+		04911843245566FE00145DE3 /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
+		04911844245566FE00145DE3 /* NSString+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utils.m"; sourceTree = "<group>"; };
+		04911845245566FE00145DE3 /* ContactDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactDataHelper.h; sourceTree = "<group>"; };
+		049118482455671700145DE3 /* FriendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendModel.h; sourceTree = "<group>"; };
+		049118492455671800145DE3 /* FriendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendModel.m; sourceTree = "<group>"; };
 		0494CBEA2450122000AA0EBF /* ZZYPhotoHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZYPhotoHelper.h; sourceTree = "<group>"; };
 		0494CBEB2450122000AA0EBF /* ZZYPhotoHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZYPhotoHelper.m; sourceTree = "<group>"; };
 		0494CBEE245020E600AA0EBF /* YMUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMUser.h; sourceTree = "<group>"; };
@@ -343,6 +447,31 @@
 		0494CBFA2450320300AA0EBF /* ICChatServerDefs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICChatServerDefs.h; sourceTree = "<group>"; };
 		0494CBFC2450347200AA0EBF /* BaseChatCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseChatCell.h; sourceTree = "<group>"; };
 		0494CBFD2450347200AA0EBF /* BaseChatCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseChatCell.m; sourceTree = "<group>"; };
+		04985D2E24623E42004E2D87 /* UIImage+XLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XLExtension.h"; sourceTree = "<group>"; };
+		04985D2F24623E42004E2D87 /* XLPasswordInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLPasswordInputView.h; sourceTree = "<group>"; };
+		04985D3024623E42004E2D87 /* UIView+XLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XLExtension.m"; sourceTree = "<group>"; };
+		04985D3124623E42004E2D87 /* UIImage+XLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XLExtension.m"; sourceTree = "<group>"; };
+		04985D3224623E42004E2D87 /* XLPasswordInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLPasswordInputView.m; sourceTree = "<group>"; };
+		04985D3324623E42004E2D87 /* UIView+XLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XLExtension.h"; sourceTree = "<group>"; };
+		04985D3724624035004E2D87 /* JoinMeetingPopupView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JoinMeetingPopupView.h; sourceTree = "<group>"; };
+		04985D3824624035004E2D87 /* JoinMeetingPopupView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JoinMeetingPopupView.m; sourceTree = "<group>"; };
+		04985D3A24625310004E2D87 /* MeetingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeetingController.h; sourceTree = "<group>"; };
+		04985D3B24625310004E2D87 /* MeetingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetingController.m; sourceTree = "<group>"; };
+		04985D3F24625CEE004E2D87 /* AlreadyJoinedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlreadyJoinedViewController.h; sourceTree = "<group>"; };
+		04985D4024625CEE004E2D87 /* AlreadyJoinedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlreadyJoinedViewController.m; sourceTree = "<group>"; };
+		04985D4124625CEE004E2D87 /* AlreadyJoinedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlreadyJoinedViewController.xib; sourceTree = "<group>"; };
+		04985D4424625CFB004E2D87 /* NotJoinedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotJoinedViewController.h; sourceTree = "<group>"; };
+		04985D4524625CFB004E2D87 /* NotJoinedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotJoinedViewController.m; sourceTree = "<group>"; };
+		04985D4624625CFC004E2D87 /* NotJoinedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotJoinedViewController.xib; sourceTree = "<group>"; };
+		04985D4924626B4F004E2D87 /* AlreadyJoinMeetingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlreadyJoinMeetingCell.h; sourceTree = "<group>"; };
+		04985D4A24626B4F004E2D87 /* AlreadyJoinMeetingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlreadyJoinMeetingCell.m; sourceTree = "<group>"; };
+		04985D4B24626B4F004E2D87 /* AlreadyJoinMeetingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlreadyJoinMeetingCell.xib; sourceTree = "<group>"; };
+		04985D4E24626B5F004E2D87 /* NotJoinMeetingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotJoinMeetingCell.h; sourceTree = "<group>"; };
+		04985D4F24626B5F004E2D87 /* NotJoinMeetingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotJoinMeetingCell.m; sourceTree = "<group>"; };
+		04985D5024626B5F004E2D87 /* NotJoinMeetingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotJoinMeetingCell.xib; sourceTree = "<group>"; };
+		04985D5324626F5C004E2D87 /* SecretKeyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecretKeyView.h; sourceTree = "<group>"; };
+		04985D5424626F5C004E2D87 /* SecretKeyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecretKeyView.m; sourceTree = "<group>"; };
+		04985D5624626F70004E2D87 /* SecretKeyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecretKeyView.xib; sourceTree = "<group>"; };
 		04D7275A24484821008C85C6 /* ChatEmojiView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatEmojiView.h; sourceTree = "<group>"; };
 		04D7275B24484821008C85C6 /* ChatEmojiView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatEmojiView.m; sourceTree = "<group>"; };
 		04D7275D244848F1008C85C6 /* ChatEmojiCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatEmojiCell.h; sourceTree = "<group>"; };
@@ -354,6 +483,50 @@
 		04D7276724485872008C85C6 /* ChatInfoRightCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatInfoRightCell.h; sourceTree = "<group>"; };
 		04D7276824485872008C85C6 /* ChatInfoRightCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatInfoRightCell.m; sourceTree = "<group>"; };
 		04D7276924485872008C85C6 /* ChatInfoRightCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatInfoRightCell.xib; sourceTree = "<group>"; };
+		04DC3A8A245909AE00B293C4 /* VideoMeetingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoMeetingCell.h; sourceTree = "<group>"; };
+		04DC3A8B245909AE00B293C4 /* VideoMeetingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoMeetingCell.m; sourceTree = "<group>"; };
+		04DC3A8C245909AE00B293C4 /* VideoMeetingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoMeetingCell.xib; sourceTree = "<group>"; };
+		04DC3A92245922F400B293C4 /* UIView+RoundedBorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundedBorder.h"; sourceTree = "<group>"; };
+		04DC3A93245922F400B293C4 /* UIView+RoundedBorder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundedBorder.m"; sourceTree = "<group>"; };
+		04DC3A952459245C00B293C4 /* LaunchMeetingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchMeetingViewController.h; sourceTree = "<group>"; };
+		04DC3A962459245C00B293C4 /* LaunchMeetingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchMeetingViewController.m; sourceTree = "<group>"; };
+		04DC3A972459245C00B293C4 /* LaunchMeetingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchMeetingViewController.xib; sourceTree = "<group>"; };
+		04DC3A9B245924E200B293C4 /* MeetingThemeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeetingThemeView.h; sourceTree = "<group>"; };
+		04DC3A9C245924E200B293C4 /* MeetingThemeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetingThemeView.m; sourceTree = "<group>"; };
+		04DC3A9F2459572F00B293C4 /* LaunchMeetingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchMeetingModel.h; sourceTree = "<group>"; };
+		04DC3AA02459572F00B293C4 /* LaunchMeetingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchMeetingModel.m; sourceTree = "<group>"; };
+		04DC3AF624597D1900B293C4 /* WorkMoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkMoreViewController.h; sourceTree = "<group>"; };
+		04DC3AF724597D1900B293C4 /* WorkMoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkMoreViewController.m; sourceTree = "<group>"; };
+		04DC3AF824597D1900B293C4 /* WorkMoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkMoreViewController.xib; sourceTree = "<group>"; };
+		04DC3B05245981E400B293C4 /* CXDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDatePickerView.m; sourceTree = "<group>"; };
+		04DC3B06245981E400B293C4 /* NSDate+CXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CXCategory.h"; sourceTree = "<group>"; };
+		04DC3B07245981E400B293C4 /* CXDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXDatePickerView.h; sourceTree = "<group>"; };
+		04DC3B08245981E400B293C4 /* NSDate+CXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CXCategory.m"; sourceTree = "<group>"; };
+		04DC3B09245981E400B293C4 /* PickerViewParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewParameter.h; sourceTree = "<group>"; };
+		04DCA37D245A56A20032AD42 /* TelephoneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TelephoneViewController.xib; sourceTree = "<group>"; };
+		04DCA37F245A5DD20032AD42 /* DialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialViewController.h; sourceTree = "<group>"; };
+		04DCA380245A5DD20032AD42 /* DialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialViewController.m; sourceTree = "<group>"; };
+		04DCA381245A5DD20032AD42 /* DialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DialViewController.xib; sourceTree = "<group>"; };
+		04DCA385245A5F5A0032AD42 /* DialCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialCell.h; sourceTree = "<group>"; };
+		04DCA386245A5F5A0032AD42 /* DialCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialCell.m; sourceTree = "<group>"; };
+		04DCA387245A5F5A0032AD42 /* DialCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DialCell.xib; sourceTree = "<group>"; };
+		04DCA38A245A5F690032AD42 /* DialFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialFlowLayout.h; sourceTree = "<group>"; };
+		04DCA38B245A5F690032AD42 /* DialFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialFlowLayout.m; sourceTree = "<group>"; };
+		04DCA38D245A6B4D0032AD42 /* CallLogViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallLogViewController.h; sourceTree = "<group>"; };
+		04DCA38E245A6B4D0032AD42 /* CallLogViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CallLogViewController.m; sourceTree = "<group>"; };
+		04DCA390245A71F70032AD42 /* AllCallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllCallViewController.h; sourceTree = "<group>"; };
+		04DCA391245A71F70032AD42 /* AllCallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllCallViewController.m; sourceTree = "<group>"; };
+		04DCA392245A71F70032AD42 /* AllCallViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllCallViewController.xib; sourceTree = "<group>"; };
+		04DCA39A245A72380032AD42 /* CallLogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CallLogViewController.xib; sourceTree = "<group>"; };
+		04DCA39C245A81890032AD42 /* CallLogCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallLogCell.h; sourceTree = "<group>"; };
+		04DCA39D245A81890032AD42 /* CallLogCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CallLogCell.m; sourceTree = "<group>"; };
+		04DCA39E245A81890032AD42 /* CallLogCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CallLogCell.xib; sourceTree = "<group>"; };
+		04DCA3A2245AA6F30032AD42 /* MyTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
+		04DCA3A3245AA6F30032AD42 /* MyTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
+		04DCA3A4245AA6F30032AD42 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
+		04DCA3A7245AAC100032AD42 /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		04DCA3A8245AAC100032AD42 /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		04DCA3AA245AAC210032AD42 /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		04FD2F68244FD72E0041A9A9 /* QRCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		04FD2F69244FD72E0041A9A9 /* QRCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		04FD2F6A244FD72E0041A9A9 /* QRCodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRCodeViewController.xib; sourceTree = "<group>"; };
@@ -383,8 +556,8 @@
 		04FD2F9B244FF82E0041A9A9 /* ChatMoreView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatMoreView.h; sourceTree = "<group>"; };
 		04FD2F9C244FF82E0041A9A9 /* ChatMoreView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatMoreView.m; sourceTree = "<group>"; };
 		04FD2F9E244FF8840041A9A9 /* ChatMoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatMoreView.xib; sourceTree = "<group>"; };
-		085CC10EB45681E39F1BE8DA /* Pods_ronghetongxun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ronghetongxun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2169E6188B9A170B2DCCA77E /* Pods-ronghetongxun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ronghetongxun.debug.xcconfig"; path = "Target Support Files/Pods-ronghetongxun/Pods-ronghetongxun.debug.xcconfig"; sourceTree = "<group>"; };
+		373ECEBB86225ED905E36EFD /* Pods_ronghetongxun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ronghetongxun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED686586A7A2497E32267502 /* Pods-ronghetongxun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ronghetongxun.release.xcconfig"; path = "Target Support Files/Pods-ronghetongxun/Pods-ronghetongxun.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -393,7 +566,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19D0AD5B7E137DF31248F0A1 /* Pods_ronghetongxun.framework in Frameworks */,
+				04553A0D2456AC7100135460 /* libopencore-amrwb.a in Frameworks */,
+				04553A0E2456AC7100135460 /* libopencore-amrnb.a in Frameworks */,
+				E0413A195A7C8AC458C0625C /* Pods_ronghetongxun.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +667,9 @@
 		041D585724400FC600FD2120 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				04985D2D24623E42004E2D87 /* XLPasswordInputView */,
+				04DC3B04245981E400B293C4 /* CXDatePickerView */,
+				045539FD2456AC7100135460 /* VoiceConvert */,
 				0478CF0624528D4B0073F86E /* YMButton.h */,
 				0478CF0724528D4B0073F86E /* YMButton.m */,
 			);
@@ -534,26 +712,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		041D585B24400FE800FD2120 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		041D585C24400FEB00FD2120 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
 		041D585D24400FEF00FD2120 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				041D588D244016ED00FD2120 /* MyViewController.h */,
 				041D588E244016ED00FD2120 /* MyViewController.m */,
 				041D588F244016ED00FD2120 /* MyViewController.xib */,
+				04DCA3A7245AAC100032AD42 /* AboutViewController.h */,
+				04DCA3A8245AAC100032AD42 /* AboutViewController.m */,
+				04DCA3AA245AAC210032AD42 /* AboutViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -574,9 +741,8 @@
 		041D585F2440108D00FD2120 /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
+				04DCA3A1245AA6E10032AD42 /* Cell */,
 				041D585D24400FEF00FD2120 /* Controller */,
-				041D585C24400FEB00FD2120 /* model */,
-				041D585B24400FE800FD2120 /* View */,
 			);
 			path = "我的";
 			sourceTree = "<group>";
@@ -584,9 +750,34 @@
 		041D58602440109500FD2120 /* 工作 */ = {
 			isa = PBXGroup;
 			children = (
+				04DC3A9E2459572000B293C4 /* model */,
+				04DC3A9A245924C500B293C4 /* view */,
+				0445E918245830D400DA618D /* cell */,
 				041D587E244016AD00FD2120 /* WorkViewController.h */,
 				041D587F244016AD00FD2120 /* WorkViewController.m */,
 				041D5880244016AD00FD2120 /* WorkViewController.xib */,
+				0445E91024581D9700DA618D /* ScheduleViewController.h */,
+				0445E91124581D9700DA618D /* ScheduleViewController.m */,
+				0445E9192458310C00DA618D /* CreateTripViewController.h */,
+				0445E91A2458310C00DA618D /* CreateTripViewController.m */,
+				0445E91B2458310C00DA618D /* CreateTripViewController.xib */,
+				0445E91E2458315000DA618D /* VideoMeetingViewController.h */,
+				0445E91F2458315000DA618D /* VideoMeetingViewController.m */,
+				0445E9202458315000DA618D /* VideoMeetingViewController.xib */,
+				04DC3A952459245C00B293C4 /* LaunchMeetingViewController.h */,
+				04DC3A962459245C00B293C4 /* LaunchMeetingViewController.m */,
+				04DC3A972459245C00B293C4 /* LaunchMeetingViewController.xib */,
+				04985D3A24625310004E2D87 /* MeetingController.h */,
+				04985D3B24625310004E2D87 /* MeetingController.m */,
+				04985D3F24625CEE004E2D87 /* AlreadyJoinedViewController.h */,
+				04985D4024625CEE004E2D87 /* AlreadyJoinedViewController.m */,
+				04985D4124625CEE004E2D87 /* AlreadyJoinedViewController.xib */,
+				04985D4424625CFB004E2D87 /* NotJoinedViewController.h */,
+				04985D4524625CFB004E2D87 /* NotJoinedViewController.m */,
+				04985D4624625CFC004E2D87 /* NotJoinedViewController.xib */,
+				04DC3AF624597D1900B293C4 /* WorkMoreViewController.h */,
+				04DC3AF724597D1900B293C4 /* WorkMoreViewController.m */,
+				04DC3AF824597D1900B293C4 /* WorkMoreViewController.xib */,
 			);
 			path = "工作";
 			sourceTree = "<group>";
@@ -604,14 +795,19 @@
 		041D5862244010A000FD2120 /* 电话 */ = {
 			isa = PBXGroup;
 			children = (
+				04DCA384245A5F430032AD42 /* cell */,
 				041D5888244016E400FD2120 /* TelephoneViewController.h */,
 				041D5889244016E400FD2120 /* TelephoneViewController.m */,
-				041D589D2440254A00FD2120 /* CallRecordViewController.h */,
-				041D589E2440254A00FD2120 /* CallRecordViewController.m */,
-				041D589F2440254A00FD2120 /* CallRecordViewController.xib */,
-				041D58A22440257800FD2120 /* DialViewController.h */,
-				041D58A32440257800FD2120 /* DialViewController.m */,
-				041D58A42440257800FD2120 /* DialViewController.xib */,
+				04DCA37D245A56A20032AD42 /* TelephoneViewController.xib */,
+				04DCA37F245A5DD20032AD42 /* DialViewController.h */,
+				04DCA380245A5DD20032AD42 /* DialViewController.m */,
+				04DCA381245A5DD20032AD42 /* DialViewController.xib */,
+				04DCA38D245A6B4D0032AD42 /* CallLogViewController.h */,
+				04DCA38E245A6B4D0032AD42 /* CallLogViewController.m */,
+				04DCA39A245A72380032AD42 /* CallLogViewController.xib */,
+				04DCA390245A71F70032AD42 /* AllCallViewController.h */,
+				04DCA391245A71F70032AD42 /* AllCallViewController.m */,
+				04DCA392245A71F70032AD42 /* AllCallViewController.xib */,
 			);
 			path = "电话";
 			sourceTree = "<group>";
@@ -643,6 +839,8 @@
 				041D589224401B1600FD2120 /* BaseTabBar.m */,
 				041D5867244010F400FD2120 /* BaseViewController.h */,
 				041D5868244010F400FD2120 /* BaseViewController.m */,
+				0445E90D2457DCE900DA618D /* BaseTableVIewController.h */,
+				0445E90E2457DCE900DA618D /* BaseTableVIewController.m */,
 				041D586A2440110A00FD2120 /* BaseNavigationController.h */,
 				041D586B2440110A00FD2120 /* BaseNavigationController.m */,
 				041D586D2440112100FD2120 /* RootTabBarController.h */,
@@ -660,6 +858,20 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		0424F1692455886E00E0352A /* test */ = {
+			isa = PBXGroup;
+			children = (
+				049118482455671700145DE3 /* FriendModel.h */,
+				049118492455671800145DE3 /* FriendModel.m */,
+				04911845245566FE00145DE3 /* ContactDataHelper.h */,
+				04911842245566FE00145DE3 /* ContactDataHelper.m */,
+				04911843245566FE00145DE3 /* NSString+Utils.h */,
+				04911844245566FE00145DE3 /* NSString+Utils.m */,
+				04911840245566DF00145DE3 /* friendInfo.plist */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
 		0445733224494F6800BAD04F /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -669,6 +881,8 @@
 				0445732D24493CB800BAD04F /* MBProgressHUD+YM.m */,
 				0412B4FB2446C2CC00F0728E /* UIButton+timer.h */,
 				0412B4FC2446C2CC00F0728E /* UIButton+timer.m */,
+				04DC3A92245922F400B293C4 /* UIView+RoundedBorder.h */,
+				04DC3A93245922F400B293C4 /* UIView+RoundedBorder.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -684,8 +898,29 @@
 				04705B0E24441ADF00CEA187 /* UIColor+YM.m */,
 				0476A39424516E1700801F9D /* UIResponder+GXRouter.h */,
 				0476A39524516E1700801F9D /* UIResponder+GXRouter.m */,
+				045539E22456631900135460 /* UIImage+Extend.h */,
+				045539E32456631900135460 /* UIImage+Extend.m */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		0445E918245830D400DA618D /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				0445E9132458296D00DA618D /* ScheduleCell.h */,
+				0445E9142458296D00DA618D /* ScheduleCell.m */,
+				0445E9152458296D00DA618D /* ScheduleCell.xib */,
+				04DC3A8A245909AE00B293C4 /* VideoMeetingCell.h */,
+				04DC3A8B245909AE00B293C4 /* VideoMeetingCell.m */,
+				04DC3A8C245909AE00B293C4 /* VideoMeetingCell.xib */,
+				04985D4924626B4F004E2D87 /* AlreadyJoinMeetingCell.h */,
+				04985D4A24626B4F004E2D87 /* AlreadyJoinMeetingCell.m */,
+				04985D4B24626B4F004E2D87 /* AlreadyJoinMeetingCell.xib */,
+				04985D4E24626B5F004E2D87 /* NotJoinMeetingCell.h */,
+				04985D4F24626B5F004E2D87 /* NotJoinMeetingCell.m */,
+				04985D5024626B5F004E2D87 /* NotJoinMeetingCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		044D6751244E7DC100915BD0 /* 添加联系人 */ = {
@@ -704,9 +939,59 @@
 			path = "添加联系人";
 			sourceTree = "<group>";
 		};
+		045539FD2456AC7100135460 /* VoiceConvert */ = {
+			isa = PBXGroup;
+			children = (
+				04553A092456AC7100135460 /* amrwapper */,
+				04553A022456AC7100135460 /* lib */,
+				04553A062456AC7100135460 /* opencore-amrnb */,
+				045539FE2456AC7100135460 /* opencore-amrwb */,
+				04553A052456AC7100135460 /* VoiceConverter.h */,
+				04553A012456AC7100135460 /* VoiceConverter.mm */,
+			);
+			path = VoiceConvert;
+			sourceTree = "<group>";
+		};
+		045539FE2456AC7100135460 /* opencore-amrwb */ = {
+			isa = PBXGroup;
+			children = (
+				045539FF2456AC7100135460 /* if_rom.h */,
+				04553A002456AC7100135460 /* dec_if.h */,
+			);
+			path = "opencore-amrwb";
+			sourceTree = "<group>";
+		};
+		04553A022456AC7100135460 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				04553A032456AC7100135460 /* libopencore-amrwb.a */,
+				04553A042456AC7100135460 /* libopencore-amrnb.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		04553A062456AC7100135460 /* opencore-amrnb */ = {
+			isa = PBXGroup;
+			children = (
+				04553A072456AC7100135460 /* interf_dec.h */,
+				04553A082456AC7100135460 /* interf_enc.h */,
+			);
+			path = "opencore-amrnb";
+			sourceTree = "<group>";
+		};
+		04553A092456AC7100135460 /* amrwapper */ = {
+			isa = PBXGroup;
+			children = (
+				04553A0A2456AC7100135460 /* amrFileCodec.mm */,
+				04553A0B2456AC7100135460 /* amrFileCodec.h */,
+			);
+			path = amrwapper;
+			sourceTree = "<group>";
+		};
 		0466EFCB244540FF00FDF511 /* 群聊配置 */ = {
 			isa = PBXGroup;
 			children = (
+				0424F1692455886E00E0352A /* test */,
 				0476A36324511E3000801F9D /* GroupDataViewController.h */,
 				0476A36424511E3000801F9D /* GroupDataViewController.m */,
 				0476A36524511E3000801F9D /* GroupDataViewController.xib */,
@@ -728,6 +1013,7 @@
 				0476A372245122A700801F9D /* GroupQRCodeViewController.xib */,
 				0478CF17245297540073F86E /* GroupMemberListVC.h */,
 				0478CF18245297540073F86E /* GroupMemberListVC.m */,
+				049118392455586000145DE3 /* GroupMemberListVC.xib */,
 			);
 			path = "群聊配置";
 			sourceTree = "<group>";
@@ -761,6 +1047,10 @@
 				04856E2A245037FC00578E76 /* ICMessageConst.m */,
 				0494CBF724502B4300AA0EBF /* ICMessageHelper.h */,
 				0494CBF824502B4300AA0EBF /* ICMessageHelper.m */,
+				045539F724568E8D00135460 /* ICRecordManager.h */,
+				045539F624568E8D00135460 /* ICRecordManager.m */,
+				045539FA24568EC100135460 /* ICFileTool.h */,
+				045539F924568EC100135460 /* ICFileTool.m */,
 				0494CBF424502A5100AA0EBF /* ICMessage.h */,
 				0494CBF524502A5100AA0EBF /* ICMessage.m */,
 				046B64F1244EE7B800062A3E /* ChatViewController.h */,
@@ -844,6 +1134,9 @@
 				0478CF2A2452D03E0073F86E /* GroupPhotoCell.xib */,
 				0478CF2D2452D1760073F86E /* GroupPhotoHeaderView.h */,
 				0478CF2E2452D1760073F86E /* GroupPhotoHeaderView.m */,
+				0491183B24555C4700145DE3 /* GroupMembersCell.h */,
+				0491183C24555C4700145DE3 /* GroupMembersCell.m */,
+				0491183D24555C4700145DE3 /* GroupMembersCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -891,11 +1184,90 @@
 				0476A3812451338500801F9D /* ChatVideoRightCell.h */,
 				0476A3822451338500801F9D /* ChatVideoRightCell.m */,
 				0476A3832451338500801F9D /* ChatVideoRightCell.xib */,
+				045539EC2456807A00135460 /* ChatVoiceLeftCell.h */,
+				045539ED2456807A00135460 /* ChatVoiceLeftCell.m */,
+				045539EE2456807A00135460 /* ChatVoiceLeftCell.xib */,
+				045539F12456808900135460 /* ChatVoiceRightCell.h */,
+				045539F22456808900135460 /* ChatVoiceRightCell.m */,
+				045539F32456808900135460 /* ChatVoiceRightCell.xib */,
 				0478CF1A2452BD090073F86E /* ChatTimeCell.h */,
 				0478CF1B2452BD090073F86E /* ChatTimeCell.m */,
 				0478CF1C2452BD090073F86E /* ChatTimeCell.xib */,
 			);
 			path = chatCell;
+			sourceTree = "<group>";
+		};
+		04985D2D24623E42004E2D87 /* XLPasswordInputView */ = {
+			isa = PBXGroup;
+			children = (
+				04985D2E24623E42004E2D87 /* UIImage+XLExtension.h */,
+				04985D2F24623E42004E2D87 /* XLPasswordInputView.h */,
+				04985D3024623E42004E2D87 /* UIView+XLExtension.m */,
+				04985D3124623E42004E2D87 /* UIImage+XLExtension.m */,
+				04985D3224623E42004E2D87 /* XLPasswordInputView.m */,
+				04985D3324623E42004E2D87 /* UIView+XLExtension.h */,
+			);
+			path = XLPasswordInputView;
+			sourceTree = "<group>";
+		};
+		04DC3A9A245924C500B293C4 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				04DC3A9B245924E200B293C4 /* MeetingThemeView.h */,
+				04DC3A9C245924E200B293C4 /* MeetingThemeView.m */,
+				04985D3724624035004E2D87 /* JoinMeetingPopupView.h */,
+				04985D3824624035004E2D87 /* JoinMeetingPopupView.m */,
+				04985D5324626F5C004E2D87 /* SecretKeyView.h */,
+				04985D5424626F5C004E2D87 /* SecretKeyView.m */,
+				04985D5624626F70004E2D87 /* SecretKeyView.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		04DC3A9E2459572000B293C4 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				04DC3A9F2459572F00B293C4 /* LaunchMeetingModel.h */,
+				04DC3AA02459572F00B293C4 /* LaunchMeetingModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		04DC3B04245981E400B293C4 /* CXDatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				04DC3B07245981E400B293C4 /* CXDatePickerView.h */,
+				04DC3B05245981E400B293C4 /* CXDatePickerView.m */,
+				04DC3B06245981E400B293C4 /* NSDate+CXCategory.h */,
+				04DC3B08245981E400B293C4 /* NSDate+CXCategory.m */,
+				04DC3B09245981E400B293C4 /* PickerViewParameter.h */,
+			);
+			path = CXDatePickerView;
+			sourceTree = "<group>";
+		};
+		04DCA384245A5F430032AD42 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				04DCA385245A5F5A0032AD42 /* DialCell.h */,
+				04DCA386245A5F5A0032AD42 /* DialCell.m */,
+				04DCA387245A5F5A0032AD42 /* DialCell.xib */,
+				04DCA38A245A5F690032AD42 /* DialFlowLayout.h */,
+				04DCA38B245A5F690032AD42 /* DialFlowLayout.m */,
+				04DCA39C245A81890032AD42 /* CallLogCell.h */,
+				04DCA39D245A81890032AD42 /* CallLogCell.m */,
+				04DCA39E245A81890032AD42 /* CallLogCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		04DCA3A1245AA6E10032AD42 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				04DCA3A2245AA6F30032AD42 /* MyTableViewCell.h */,
+				04DCA3A3245AA6F30032AD42 /* MyTableViewCell.m */,
+				04DCA3A4245AA6F30032AD42 /* MyTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		04EC04ED244EC75D00BE2500 /* YMAlertView */ = {
@@ -964,7 +1336,7 @@
 		7C8FF75680B9B07625E18607 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				085CC10EB45681E39F1BE8DA /* Pods_ronghetongxun.framework */,
+				373ECEBB86225ED905E36EFD /* Pods_ronghetongxun.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -980,7 +1352,7 @@
 				041D583324400F2900FD2120 /* Sources */,
 				041D583424400F2900FD2120 /* Frameworks */,
 				041D583524400F2900FD2120 /* Resources */,
-				9CE1D4925EB8ED20094BFC0A /* [CP] Embed Pods Frameworks */,
+				B9FB1CDFC22DF19CB49EE51C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1033,32 +1405,46 @@
 				04FD2F99244FDDD70041A9A9 /* qrcode_scan_bar@2x.png in Resources */,
 				041D589C2440250900FD2120 /* MailListViewController.xib in Resources */,
 				0478CF272452C5D90073F86E /* GroupNoticeCell.xib in Resources */,
+				04DCA3A6245AA6F30032AD42 /* MyTableViewCell.xib in Resources */,
 				04FD2F87244FDDD70041A9A9 /* qr_vc_right@3x.png in Resources */,
 				04FD2F6C244FD72E0041A9A9 /* QRCodeViewController.xib in Resources */,
 				04FD2F8F244FDDD70041A9A9 /* qr_vc_left@2x.png in Resources */,
 				04D7276B24485872008C85C6 /* ChatInfoRightCell.xib in Resources */,
 				0478CF1E2452BD090073F86E /* ChatTimeCell.xib in Resources */,
+				0445E9222458315000DA618D /* VideoMeetingViewController.xib in Resources */,
+				04985D5224626B5F004E2D87 /* NotJoinMeetingCell.xib in Resources */,
 				04FD2F94244FDDD70041A9A9 /* qr_top_right@3x.png in Resources */,
 				0403C36924446703003F6E06 /* SelectPersonViewController.xib in Resources */,
 				04FD2F8E244FDDD70041A9A9 /* qr_bottom_right@2x.png in Resources */,
 				04705B072444124C00CEA187 /* ResetPasswordViewController.xib in Resources */,
 				0476A38F245133A600801F9D /* ChatImageRightCell.xib in Resources */,
+				04911841245566DF00145DE3 /* friendInfo.plist in Resources */,
+				04985D4324625CEE004E2D87 /* AlreadyJoinedViewController.xib in Resources */,
+				04985D5724626F70004E2D87 /* SecretKeyView.xib in Resources */,
+				0445E9172458296D00DA618D /* ScheduleCell.xib in Resources */,
+				04DC3AFA24597D1900B293C4 /* WorkMoreViewController.xib in Resources */,
+				04DCA389245A5F5A0032AD42 /* DialCell.xib in Resources */,
 				04FD2F96244FDDD70041A9A9 /* qr_bottom_left@2x.png in Resources */,
 				04FD2F8B244FDDD70041A9A9 /* qrcode_scan_btn_myqrcode_down@2x.png in Resources */,
 				04FD2F88244FDDD70041A9A9 /* qrcode_scan_btn_photo_down@2x.png in Resources */,
 				041D5891244016ED00FD2120 /* MyViewController.xib in Resources */,
 				04FD2F86244FDDD70041A9A9 /* qr_vc_right@2x.png in Resources */,
 				04FD2F93244FDDD70041A9A9 /* qr_vc_left@3x.png in Resources */,
+				04DCA3A0245A81890032AD42 /* CallLogCell.xib in Resources */,
 				04D72761244848F1008C85C6 /* ChatEmojiCell.xib in Resources */,
 				0476A36724511E3000801F9D /* GroupDataViewController.xib in Resources */,
+				04DCA394245A71F70032AD42 /* AllCallViewController.xib in Resources */,
 				044D6756244E7E3200915BD0 /* AddContactPersonViewController.xib in Resources */,
 				041D584A24400F2A00FD2120 /* LaunchScreen.storyboard in Resources */,
+				04985D4D24626B4F004E2D87 /* AlreadyJoinMeetingCell.xib in Resources */,
 				04FD2F9A244FDDD70041A9A9 /* qr_top_right@2x.png in Resources */,
 				0476A374245122A700801F9D /* GroupQRCodeViewController.xib in Resources */,
 				0476A36C2451211E00801F9D /* ApplyJoinViewController.xib in Resources */,
+				04DCA39B245A72380032AD42 /* CallLogViewController.xib in Resources */,
 				04FD2F97244FDDD70041A9A9 /* qr_bottom_left@3x.png in Resources */,
 				04FD2F8D244FDDD70041A9A9 /* qr_bottom_right@3x.png in Resources */,
 				041D5882244016AD00FD2120 /* WorkViewController.xib in Resources */,
+				04985D4824625CFC004E2D87 /* NotJoinedViewController.xib in Resources */,
 				041D584724400F2A00FD2120 /* Assets.xcassets in Resources */,
 				0476A3852451338500801F9D /* ChatVideoRightCell.xib in Resources */,
 				0403C36E24446B2F003F6E06 /* SelectPersonViewCell.xib in Resources */,
@@ -1066,21 +1452,29 @@
 				04FD2F8A244FDDD70041A9A9 /* qrcode_scan_btn_photo_nor@2x.png in Resources */,
 				0478CF2C2452D03E0073F86E /* GroupPhotoCell.xib in Resources */,
 				0403C35D24443EC7003F6E06 /* MessageViewCell.xib in Resources */,
-				041D58A62440257800FD2120 /* DialViewController.xib in Resources */,
 				041D587D244016A400FD2120 /* MessageViewController.xib in Resources */,
 				04FD2F92244FDDD70041A9A9 /* qr_scan_line@3x.png in Resources */,
 				046B64F5244EE7B800062A3E /* ChatViewController.xib in Resources */,
 				04D7276624485862008C85C6 /* ChatInfoLeftCell.xib in Resources */,
+				0491183A2455586000145DE3 /* GroupMemberListVC.xib in Resources */,
+				04DCA37E245A56A20032AD42 /* TelephoneViewController.xib in Resources */,
 				0476A3802451337600801F9D /* ChatVideoLeftCell.xib in Resources */,
 				04FD2F95244FDDD70041A9A9 /* qr_top_left@3x.png in Resources */,
 				04FD2F90244FDDD70041A9A9 /* qrcode_scan_btn_flash_nor@2x.png in Resources */,
+				0445E91D2458310C00DA618D /* CreateTripViewController.xib in Resources */,
+				04DC3A8E245909AE00B293C4 /* VideoMeetingCell.xib in Resources */,
 				044D6760244E919200915BD0 /* UserInfoCell.xib in Resources */,
 				044D675B244E85B000915BD0 /* UserInfoViewController.xib in Resources */,
 				0476A38A2451339900801F9D /* ChatImageLeftCell.xib in Resources */,
-				041D58A12440254A00FD2120 /* CallRecordViewController.xib in Resources */,
 				04705B022444122A00CEA187 /* LoginViewController.xib in Resources */,
+				045539F52456808900135460 /* ChatVoiceRightCell.xib in Resources */,
 				04FD2F9F244FF8840041A9A9 /* ChatMoreView.xib in Resources */,
+				0491183F24555C4700145DE3 /* GroupMembersCell.xib in Resources */,
+				045539F02456807A00135460 /* ChatVoiceLeftCell.xib in Resources */,
+				04DCA3AB245AAC210032AD42 /* AboutViewController.xib in Resources */,
+				04DC3A992459245C00B293C4 /* LaunchMeetingViewController.xib in Resources */,
 				04FD2F98244FDDD70041A9A9 /* qr_top_left@2x.png in Resources */,
+				04DCA383245A5DD20032AD42 /* DialViewController.xib in Resources */,
 				04FD2F8C244FDDD70041A9A9 /* qrcode_scan_btn_flash_down@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1110,7 +1504,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9CE1D4925EB8ED20094BFC0A /* [CP] Embed Pods Frameworks */ = {
+		B9FB1CDFC22DF19CB49EE51C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1134,77 +1528,113 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DC3AA12459572F00B293C4 /* LaunchMeetingModel.m in Sources */,
+				045539FC2456A87400135460 /* ICRecordManager.m in Sources */,
 				041D583C24400F2900FD2120 /* AppDelegate.m in Sources */,
 				041D5869244010F400FD2120 /* BaseViewController.m in Sources */,
+				045539E42456631900135460 /* UIImage+Extend.m in Sources */,
 				0412B4EE2446904600F0728E /* FMDBManager.m in Sources */,
 				0403C36D24446B2F003F6E06 /* SelectPersonViewCell.m in Sources */,
 				0476A39D24519B6100801F9D /* GroupChatInfoVC.m in Sources */,
 				0445732724493AF400BAD04F /* YMFileParam.m in Sources */,
 				04D72760244848F1008C85C6 /* ChatEmojiCell.m in Sources */,
+				04DCA3A9245AAC100032AD42 /* AboutViewController.m in Sources */,
 				0478CF19245297540073F86E /* GroupMemberListVC.m in Sources */,
 				04705B1124441ADF00CEA187 /* UIColor+YM.m in Sources */,
 				04FD2F9D244FF82E0041A9A9 /* ChatMoreView.m in Sources */,
+				0445E91C2458310C00DA618D /* CreateTripViewController.m in Sources */,
+				04DCA39F245A81890032AD42 /* CallLogCell.m in Sources */,
 				0476A3992451700400801F9D /* UIView+Extension.m in Sources */,
 				0494CBEC2450122000AA0EBF /* ZZYPhotoHelper.m in Sources */,
 				04856E2B245037FC00578E76 /* ICMessageConst.m in Sources */,
+				04DCA382245A5DD20032AD42 /* DialViewController.m in Sources */,
+				04911847245566FF00145DE3 /* NSString+Utils.m in Sources */,
 				044D6769244EA01200915BD0 /* YMAlertViewCell.m in Sources */,
 				0476A39324516B2100801F9D /* ICPhotoBrowserController.m in Sources */,
+				045539FB24568EC200135460 /* ICFileTool.m in Sources */,
 				041D588B244016E400FD2120 /* TelephoneViewController.m in Sources */,
 				044D675F244E919200915BD0 /* UserInfoCell.m in Sources */,
 				0476A373245122A700801F9D /* GroupQRCodeViewController.m in Sources */,
 				04705B1524441BFE00CEA187 /* NSString+XY.m in Sources */,
+				0445E91224581D9700DA618D /* ScheduleViewController.m in Sources */,
 				04457324244939B000BAD04F /* YMRequest.m in Sources */,
 				0445732E24493CB800BAD04F /* MBProgressHUD+YM.m in Sources */,
 				0466EFD3244545B200FDF511 /* SelectContactsHeaderView.m in Sources */,
 				04D7275C24484821008C85C6 /* ChatEmojiView.m in Sources */,
+				04DCA38F245A6B4D0032AD42 /* CallLogViewController.m in Sources */,
 				044D6763244E9CC800915BD0 /* YMAlertView.m in Sources */,
+				04DCA3A5245AA6F30032AD42 /* MyTableViewCell.m in Sources */,
+				0491184A2455671800145DE3 /* FriendModel.m in Sources */,
 				04FD2F6F244FDD700041A9A9 /* JJDecoderViewController.m in Sources */,
 				041D584D24400F2A00FD2120 /* main.m in Sources */,
 				0476A37F2451337600801F9D /* ChatVideoLeftCell.m in Sources */,
 				041D58742440116D00FD2120 /* BaseModel.m in Sources */,
+				04DCA393245A71F70032AD42 /* AllCallViewController.m in Sources */,
+				04DCA388245A5F5A0032AD42 /* DialCell.m in Sources */,
 				04D7276A24485872008C85C6 /* ChatInfoRightCell.m in Sources */,
 				0478CEFF24526DFF0073F86E /* GroupChatInfoHeadView.m in Sources */,
+				0445E9162458296D00DA618D /* ScheduleCell.m in Sources */,
 				0403C35C24443EC7003F6E06 /* MessageViewCell.m in Sources */,
 				041D586F2440112100FD2120 /* RootTabBarController.m in Sources */,
+				04553A0F2456AC7100135460 /* amrFileCodec.mm in Sources */,
 				0478CF132452913A0073F86E /* GroupFileViewController.m in Sources */,
 				0478CF0824528D4B0073F86E /* YMButton.m in Sources */,
+				04553A0C2456AC7100135460 /* VoiceConverter.mm in Sources */,
+				04DC3A94245922F400B293C4 /* UIView+RoundedBorder.m in Sources */,
 				044D675A244E85B000915BD0 /* UserInfoViewController.m in Sources */,
 				04705AF82443EBD400CEA187 /* EaseEmotionManager.m in Sources */,
+				04DC3AF924597D1900B293C4 /* WorkMoreViewController.m in Sources */,
 				0476A36B2451211E00801F9D /* ApplyJoinViewController.m in Sources */,
 				041D5890244016ED00FD2120 /* MyViewController.m in Sources */,
+				04985D5524626F5C004E2D87 /* SecretKeyView.m in Sources */,
 				0494CBFE2450347200AA0EBF /* BaseChatCell.m in Sources */,
 				0494CBF0245020E600AA0EBF /* YMUser.m in Sources */,
 				0466EFD624454CC300FDF511 /* SelectContactsCell.m in Sources */,
 				04705AFC244411D000CEA187 /* UserConfig.m in Sources */,
+				04985D4C24626B4F004E2D87 /* AlreadyJoinMeetingCell.m in Sources */,
 				0476A3842451338500801F9D /* ChatVideoRightCell.m in Sources */,
 				04705AF62443EBD400CEA187 /* EaseEmotionEscape.m in Sources */,
 				0478CF0224526E600073F86E /* GroupChatInfoMemberView.m in Sources */,
 				0478CF2B2452D03E0073F86E /* GroupPhotoCell.m in Sources */,
 				04705AF72443EBD400CEA187 /* EaseEmojiEmoticons.m in Sources */,
 				0476A39624516E1700801F9D /* UIResponder+GXRouter.m in Sources */,
+				045539EF2456807A00135460 /* ChatVoiceLeftCell.m in Sources */,
 				04705B062444124C00CEA187 /* ResetPasswordViewController.m in Sources */,
+				04985D4724625CFC004E2D87 /* NotJoinedViewController.m in Sources */,
+				04985D5124626B5F004E2D87 /* NotJoinMeetingCell.m in Sources */,
 				04705B012444122A00CEA187 /* LoginViewController.m in Sources */,
-				041D58A52440257800FD2120 /* DialViewController.m in Sources */,
 				0478CF0C245290E10073F86E /* GroupNoticeViewController.m in Sources */,
 				0478CF2F2452D1760073F86E /* GroupPhotoHeaderView.m in Sources */,
 				04FD2F6B244FD72E0041A9A9 /* QRCodeViewController.m in Sources */,
 				044D6755244E7E3200915BD0 /* AddContactPersonViewController.m in Sources */,
 				044D6766244E9CE400915BD0 /* YMAlertModel.m in Sources */,
+				045539F42456808900135460 /* ChatVoiceRightCell.m in Sources */,
 				0466EFDB24458C9800FDF511 /* MessageSearchVC.m in Sources */,
+				04985D3624623E42004E2D87 /* XLPasswordInputView.m in Sources */,
+				04985D3D24625310004E2D87 /* MeetingController.m in Sources */,
 				0476A38E245133A600801F9D /* ChatImageRightCell.m in Sources */,
 				0478CF1D2452BD090073F86E /* ChatTimeCell.m in Sources */,
+				04985D3924624035004E2D87 /* JoinMeetingPopupView.m in Sources */,
 				0403C360244444E8003F6E06 /* MessageMoreView.m in Sources */,
 				0478CF10245291300073F86E /* GroupPhotoViewController.m in Sources */,
-				041D58A02440254A00FD2120 /* CallRecordViewController.m in Sources */,
 				0466EFE02445BAD000FDF511 /* SocketModel.m in Sources */,
+				04DCA38C245A5F690032AD42 /* DialFlowLayout.m in Sources */,
 				04705AF52443EBD400CEA187 /* EaseEmoji.m in Sources */,
 				041D589424401B1600FD2120 /* BaseTabBar.m in Sources */,
 				0478CF262452C5D90073F86E /* GroupNoticeCell.m in Sources */,
 				0476A3892451339900801F9D /* ChatImageLeftCell.m in Sources */,
+				04DC3B0A245981E400B293C4 /* CXDatePickerView.m in Sources */,
+				04985D3524623E42004E2D87 /* UIImage+XLExtension.m in Sources */,
 				0478CF16245291D10073F86E /* GroupNoticeEditViewController.m in Sources */,
+				04911846245566FF00145DE3 /* ContactDataHelper.m in Sources */,
 				0403C36824446703003F6E06 /* SelectPersonViewController.m in Sources */,
 				0494CBF3245020F500AA0EBF /* YMGroup.m in Sources */,
+				0445E90F2457DCE900DA618D /* BaseTableVIewController.m in Sources */,
+				04985D3424623E42004E2D87 /* UIView+XLExtension.m in Sources */,
 				0403C36324444537003F6E06 /* CAShapeLayer+ViewMask.m in Sources */,
+				04985D4224625CEE004E2D87 /* AlreadyJoinedViewController.m in Sources */,
+				04DC3A9D245924E200B293C4 /* MeetingThemeView.m in Sources */,
+				0491183E24555C4700145DE3 /* GroupMembersCell.m in Sources */,
 				0412B4FD2446C2CC00F0728E /* UIButton+timer.m in Sources */,
 				0445733124494C2E00BAD04F /* YMUtils.m in Sources */,
 				0476A36624511E3000801F9D /* GroupDataViewController.m in Sources */,
@@ -1213,12 +1643,16 @@
 				046B64F4244EE7B800062A3E /* ChatViewController.m in Sources */,
 				041D58782440165700FD2120 /* AppDelegate+Configure.m in Sources */,
 				0478CF212452C2530073F86E /* NSDate+Extend.m in Sources */,
+				04DC3B0B245981E400B293C4 /* NSDate+CXCategory.m in Sources */,
+				04DC3A8D245909AE00B293C4 /* VideoMeetingCell.m in Sources */,
+				04DC3A982459245C00B293C4 /* LaunchMeetingViewController.m in Sources */,
 				0494CBF924502B4300AA0EBF /* ICMessageHelper.m in Sources */,
 				041D587C244016A400FD2120 /* MessageViewController.m in Sources */,
 				0494CBF624502A5100AA0EBF /* ICMessage.m in Sources */,
 				041D586C2440110A00FD2120 /* BaseNavigationController.m in Sources */,
 				041D5881244016AD00FD2120 /* WorkViewController.m in Sources */,
 				0412B4F12446916F00F0728E /* DBRecorder.m in Sources */,
+				0445E9212458315000DA618D /* VideoMeetingViewController.m in Sources */,
 				0412B4F42446946B00F0728E /* ChatDataModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1354,12 +1788,33 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JM2BB8HHW8;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FMDB\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManager\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDCycleScrollView\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SocketRocket\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ZBarSDK\"",
+					"\"${PODS_ROOT}/YYKit/Vendor\"",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ronghetongxun/Resource/PrefixHeader.pch";
 				INFOPLIST_FILE = ronghetongxun/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ronghetongxun/Utils/lame",
+					"$(PROJECT_DIR)/ronghetongxun/Lib/VoiceConvert/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yym.ronghetongxun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1374,12 +1829,33 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JM2BB8HHW8;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FMDB\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManager\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDCycleScrollView\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SocketRocket\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ZBarSDK\"",
+					"\"${PODS_ROOT}/YYKit/Vendor\"",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ronghetongxun/Resource/PrefixHeader.pch";
 				INFOPLIST_FILE = ronghetongxun/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ronghetongxun/Utils/lame",
+					"$(PROJECT_DIR)/ronghetongxun/Lib/VoiceConvert/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yym.ronghetongxun;
 				PRODUCT_NAME = "$(TARGET_NAME)";

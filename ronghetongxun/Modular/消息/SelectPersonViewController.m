@@ -10,7 +10,6 @@
 #import "SelectPersonViewCell.h"
 #import "SelectContactsHeaderView.h"
 
-#import "Define.h"
 #import <UIView+MJExtension.h>
 #import "UIColor+YM.h"
 @interface SelectPersonViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -37,7 +36,7 @@
                   addTarget:self
                      action:@selector(popSelfViewControllerAction)];
     
-    [self setNavigationItemWithButton:self.rightBtn
+    [self setNavigationItemWithView:self.rightBtn
                              position:itemRight];
     
     self.tableView.editing = YES;

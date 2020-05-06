@@ -70,4 +70,25 @@
     
     return message;
 }
+
++ (ICMessage *)createVoiceMessagevoicePath:(NSString *)path
+                                 from:(NSString *)from
+                                   to:(NSString *)to
+                             isSender:(BOOL)isSender{
+    
+    ICMessage *message  = [[ICMessage alloc] init];
+    message.voicePath   = path;
+    message.to          = to;
+    message.from        = from;
+    message.isSender    = isSender;
+    message.type        = [NSString stringWithFormat:@"%@_%@",TypeVoice, isSender ? @"right" : @"left"];
+    if (isSender) {
+        message.deliveryState = ICMessageDeliveryState_Delivering;
+    } else {
+        message.deliveryState = ICMessageDeliveryState_Delivered;
+    }
+    
+    return message;
+}
+
 @end

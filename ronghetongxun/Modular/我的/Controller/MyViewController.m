@@ -7,12 +7,17 @@
 //
 
 #import "MyViewController.h"
-
+#import "AboutViewController.h"
+#import "LoginViewController.h"
+#import "MyTableViewCell.h"
 #import "YMAlertView.h"
-@interface MyViewController ()<YMAlertViewDelegate>
+@interface MyViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
-    NSArray *_listArray;
+    NSArray *_dataArray;
+    
 }
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation MyViewController
@@ -20,45 +25,70 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSMutableArray <YMAlertModel *> *listArray = [NSMutableArray array];
+    _dataArray = @[
+        @{@"title":@"我的名片",
+          @"image":@"icon_my_1",
+        },
+        @{@"title":@"清理聊天记录",
+          @"image":@"icon_my_2",
+        },
+        @{@"title":@"关于融合通信",
+          @"image":@"icon_my_3",
+        },
+        @{@"title":@"退出登录",
+          @"image":@"icon_my_4",
+        },
+    ];
     
-    for (int i =0; i<4; i++) {
-        
-        YMAlertModel *model = [YMAlertModel new];
-        [model setValuesForKeysWithDictionary:@{@"content":@"测试",@"imageName":@""}];
-        if (i == 1) {
-            [model setAction:@selector(testAction1)];
-        }else{
-            [model setAction:@selector(testAction)];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.scrollEnabled = NO;
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MyTableViewCell class]) bundle:nil] forCellReuseIdentifier:@"MyTableViewCell_id"];
+    
+}
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    MyTableViewCell *cell   = [tableView dequeueReusableCellWithIdentifier:@"MyTableViewCell_id" forIndexPath:indexPath];
+    cell.selectionStyle     = UITableViewCellSelectionStyleNone;
+    cell.imgView.image      = [UIImage imageNamed:_dataArray[indexPath.row][@"image"]];
+    cell.titleLab.text      = _dataArray[indexPath.row][@"title"];
+    return cell;
+}
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 4;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 55;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    switch (indexPath.row) {
+        case 0:
+            
+            break;
+        case 1:
+            
+            break;
+        case 2:{
+            AboutViewController *aboutVC = [[AboutViewController alloc] init];
+            [self.navigationController pushViewController:aboutVC animated:YES];
         }
-        [listArray addObject:model];
+            break;
+        case 3:
+            
+            break;
+            
+        default:
+            break;
     }
-    
-    _listArray = listArray;
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+#pragma mark 退出登录action
+- (void)signOutAction{
+
+    ///退出登录清除数据等事件 调用退出登录接口
     
-    YMAlertView *alertView = [YMAlertView alertControllerWithTitle:@"标题" dataList:_listArray];
-    alertView.delegate = self;
-    
-    [alertView show];
+    UIWindow *window = [[UIApplication sharedApplication] keyWindow];
+    window.rootViewController = [[UINavigationController alloc] initWithRootViewController: [[LoginViewController alloc]init]];
 }
-
-- (void)YMAlertView:(YMAlertView *)alertView didSelectRowAtSEL:(SEL)action{
-    NSString *sel = NSStringFromSelector(action);
-
-    YMPerformSelectorMacro(self,sel);
-}
-
-- (void)testAction{
-    
-    NSLog(@"点击事件!");
-}
-
-- (void)testAction1{
-    
-    NSLog(@"点击事件11111!");
-}
-
 @end

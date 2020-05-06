@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Define.h"
 typedef NS_ENUM(NSInteger,ItemPosition){
     itemLeft = 0,
     itemRight = 1,
@@ -19,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setNavigationItem:(NSString *)title imageName:(NSString *)name position:(ItemPosition)position addTarget:(nullable id)target action:(SEL)action ;
 
-- (void)setNavigationItemWithButton:(UIButton *)button position:(ItemPosition)position;
+- (void)setNavigationItemWithView:(UIView *)view position:(ItemPosition)position;
 
 @end
 

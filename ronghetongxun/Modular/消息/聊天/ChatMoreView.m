@@ -7,7 +7,6 @@
 //
 
 #import "ChatMoreView.h"
-#import "Define.h"
 #import <UIView+MJExtension.h>
 @interface ChatMoreView ()
 {

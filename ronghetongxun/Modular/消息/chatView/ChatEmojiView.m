@@ -8,7 +8,6 @@
 
 #import "ChatEmojiView.h"
 #import "ChatEmojiCell.h"
-#import "Define.h"
 #import "EaseEmoji.h"
 #import <UIView+MJExtension.h>
 @implementation ChatEmojiView

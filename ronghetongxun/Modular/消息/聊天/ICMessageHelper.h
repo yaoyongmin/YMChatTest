@@ -49,6 +49,14 @@ NS_ASSUME_NONNULL_BEGIN
                                  date:(NSString *)date
                                  from:(NSString *)from
                                    to:(NSString *)to;
+
+///创建一条录音消息
++ (ICMessage *)createVoiceMessagevoicePath:(NSString *)path
+                                      from:(NSString *)from
+                                        to:(NSString *)to
+                                  isSender:(BOOL)isSender;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

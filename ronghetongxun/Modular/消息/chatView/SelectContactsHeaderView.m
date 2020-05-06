@@ -9,7 +9,6 @@
 #import "SelectContactsHeaderView.h"
 #import "SelectContactsCell.h"
 #import <Masonry.h>
-#import "Define.h"
 #import "UIColor+YM.h"
 @interface SelectContactsHeaderView()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -28,9 +27,6 @@ static const CGFloat searchHeight = 50;
 static const CGFloat lineViewHeight = 10;
 
 @implementation SelectContactsHeaderView
-
-
-
 
 - (void)awakeFromNib{
     [super awakeFromNib];

@@ -31,6 +31,7 @@
         self.requestSerializer = [AFHTTPRequestSerializer serializer];
         // 请求超时设定
         self.requestSerializer.timeoutInterval = 30;
+        
         self.requestSerializer.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
         
         //        [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
@@ -49,15 +50,27 @@
            success:(requestSuccessBlock)successHandler
            failure:(requestFailureBlock)failureHandler
 {
-    [self GET:[NSString stringWithFormat:@"%@/%@",BaseUrl,url] parameters:params progress: nil
+    
+    NSMutableDictionary *paramsM = [NSMutableDictionary dictionary];
+    
+    [paramsM addEntriesFromDictionary:params];
+    [paramsM setValue:[UserConfig uid] forKey:@"uid"];
+    [paramsM setValue:[UserConfig time] forKey:@"time"];
+    [paramsM setValue:[UserConfig key] forKey:@"key"];
+    
+    [self GET:[NSString stringWithFormat:@"%@/%@",BaseUrl,url] parameters:paramsM progress: nil
       success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
         
-        NSInteger code = [[responseObject objectForKey:@"code"] integerValue];
-        NSString *message = [responseObject objectForKey:@"msg"];
-        id data = [responseObject objectForKey:@"data"];
+        NSArray *allKeys = [responseObject allKeys];
+        
+        NSInteger code = [allKeys containsObject:@"code"] ? [[responseObject objectForKey:@"code"] integerValue] : 999;
+        NSString *message = [allKeys containsObject:@"msg"] ? [responseObject objectForKey:@"msg"] : @"";
+        id data = [allKeys containsObject:@"data"] ? [responseObject objectForKey:@"data"] : @{};
         
         if ([self requestSuccesErrorCode:code]) {
             successHandler(code,message,data);
+        }else{
+            NSLog(@"请求失败msg：%@",message);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"------请求失败-------%@",error);
@@ -72,13 +85,21 @@
             success:(requestSuccessBlock)successHandler
             failure:(requestFailureBlock)failureHandler
 {
-    [self POST:[NSString stringWithFormat:@"%@%@",BaseUrl,url] parameters:params progress:nil
+    NSMutableDictionary *paramsM = [NSMutableDictionary dictionary];
+    
+    [paramsM addEntriesFromDictionary:params];
+    [paramsM setValue:[UserConfig uid] forKey:@"uid"];
+    [paramsM setValue:[UserConfig time] forKey:@"time"];
+    [paramsM setValue:[UserConfig key] forKey:@"key"];
+    
+    
+    [self POST:[NSString stringWithFormat:@"%@%@",BaseUrl,url] parameters:paramsM progress:nil
        success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
         
         NSArray *allKeys = [responseObject allKeys];
         
-        NSInteger code = [allKeys containsObject:@"data"] ? [[responseObject objectForKey:@"code"] integerValue] : 999;
-        NSString *message = [allKeys containsObject:@"data"] ? [responseObject objectForKey:@"msg"] : @"";
+        NSInteger code = [allKeys containsObject:@"code"] ? [[responseObject objectForKey:@"code"] integerValue] : 999;
+        NSString *message = [allKeys containsObject:@"msg"] ? [responseObject objectForKey:@"msg"] : @"";
         id data = [allKeys containsObject:@"data"] ? [responseObject objectForKey:@"data"] : @{};
         
         if ([self requestSuccesErrorCode:code]) {

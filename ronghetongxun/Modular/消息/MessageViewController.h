@@ -6,10 +6,10 @@
 //  Copyright © 2020 DongDu Technology Co., Ltd. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "BaseTableVIewController.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MessageViewController : BaseViewController
+@interface MessageViewController : BaseTableVIewController
 
 @end
 

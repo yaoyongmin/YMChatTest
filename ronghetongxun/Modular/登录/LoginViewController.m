@@ -52,6 +52,31 @@
     
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     window.rootViewController = [[RootTabBarController alloc]init];
+    
+//    if (self.accountTextField.text.length <=0) {
+//
+//        [MBProgressHUD showTextMessage:@"请输入账号！"];
+//        return;
+//    }
+//    if (self.passwordTextField.text.length <= 0) {
+//        [MBProgressHUD showTextMessage:@"请输入密码！"];
+//        return;
+//    }
+//
+//    NSDictionary *params = @{@"password":self.passwordTextField.text,@"username":self.accountTextField.text};
+//
+//    [[YMRequest sharedManager] postRequest:kLogin params:params success:^(NSInteger code, NSString * _Nullable message, id  _Nullable data) {
+//
+//        [UserConfig userDefaultsSetObject:data[@"uid"] key:loginUid];
+//        [UserConfig userDefaultsSetObject:data[@"key"] key:loginKey];
+//        [UserConfig userDefaultsSetObject:data[@"time"] key:loginTime];
+//
+//        UIWindow *window = [UIApplication sharedApplication].keyWindow;
+//        window.rootViewController = [[RootTabBarController alloc]init];
+//
+//        [MBProgressHUD showTextMessage:@"登录成功！"];
+//    } failure:^(NSError * _Nullable error) {
+//    }];
 }
 - (IBAction)resetPassWordAction:(id)sender {
     

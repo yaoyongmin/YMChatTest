@@ -19,4 +19,7 @@ target 'ronghetongxun' do
   pod 'YYKit'
   pod 'SocketRocket'
   pod 'ZBarSDK'
+  pod 'MJExtension'
+  pod 'FSCalendar'
+
 end

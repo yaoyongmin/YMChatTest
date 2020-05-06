@@ -66,7 +66,7 @@ static const CGFloat itemHeight = 55;
     
     [self setlayoutSubviews];
     
-    [UIView animateWithDuration:0.5f animations:^{
+    [UIView animateWithDuration:0.3f animations:^{
         [self.mainView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.bottom.mas_equalTo(self.mas_bottom);
         }];
@@ -104,27 +104,27 @@ static const CGFloat itemHeight = 55;
     
     CGFloat mainViewHeight = self.dataList.count > 4 ? itemHeight * 6 : itemHeight*(self.dataList.count + 2);
     
-    [self.mainView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.mainView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.bottom.mas_equalTo(self.mas_bottom).offset(mainViewHeight);
         make.leading.trailing.mas_equalTo(self);
         make.height.mas_equalTo(mainViewHeight);
     }];
-    [self.titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.titleLab mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.mainView.mas_top);
         make.height.mas_equalTo(itemHeight-1);
         make.leading.trailing.mas_equalTo(self.mainView);
     }];
-    [self.lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.lineView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(@1);
         make.leading.trailing.mas_equalTo(15);
         make.top.mas_equalTo(self.titleLab.mas_bottom);
     }];
-    [self.cancelBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.cancelBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.bottom.mas_equalTo(self.mainView.mas_bottom);
         make.leading.trailing.mas_equalTo(self.mainView);
         make.height.mas_equalTo(itemHeight);
     }];
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.lineView.mas_bottom);
         make.leading.trailing.mas_equalTo(self.mainView);
         make.bottom.mas_equalTo(self.cancelBtn.mas_top);
@@ -199,7 +199,7 @@ static const CGFloat itemHeight = 55;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if (self.delegate && [self.delegate respondsToSelector:@selector(YMAlertView:didSelectRowAtSEL:)]) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(YMAlertView:didSelectRowAtSEL:)] && self.dataList[indexPath.row].action) {
         
         [self.delegate YMAlertView:self didSelectRowAtSEL:self.dataList[indexPath.row].action];
     }

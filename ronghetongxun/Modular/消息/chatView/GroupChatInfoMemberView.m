@@ -10,7 +10,6 @@
 #import "ICMessageConst.h"
 #import "UIColor+YM.h"
 #import <Masonry.h>
-#import "Define.h"
 @interface GroupChatInfoMemberView ()
 
 @property (nonatomic, strong) UILabel *titleLab;

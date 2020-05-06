@@ -18,5 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 +(NSString *)paramsToJsonData:(id)object;
 
 + (NSString *)unicodeToString:(NSString *)unicodeJsonString;
+
+/*按照拼音首字母排序*/
++(NSMutableArray*) SortPinYing:(NSMutableArray*)pFriendListArray;
+
 @end
 NS_ASSUME_NONNULL_END

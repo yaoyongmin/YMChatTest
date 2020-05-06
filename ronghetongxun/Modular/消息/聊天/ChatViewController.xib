@@ -12,7 +12,8 @@
             <connections>
                 <outlet property="emojiBtn" destination="LlO-nY-U7E" id="Fkc-PL-3nP"/>
                 <outlet property="tableView" destination="XGo-7w-qx0" id="uDD-QG-px5"/>
-                <outlet property="textField" destination="hdM-RI-BuQ" id="bLV-4O-UO9"/>
+                <outlet property="textView" destination="Kll-X7-EuA" id="KJw-2W-joE"/>
+                <outlet property="textViewHeightLayout" destination="qnR-I2-MhU" id="hQI-pn-t3Q"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="voiceBtn" destination="cWW-A4-65L" id="cfA-1S-7he"/>
             </connections>
@@ -36,24 +37,6 @@
                                 <action selector="voiceAction:" destination="-1" eventType="touchUpInside" id="roX-Vj-MV7"/>
                             </connections>
                         </button>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hdM-RI-BuQ">
-                            <rect key="frame" x="44" y="7.5" width="276" height="30"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="30" id="0Mp-sh-GDB"/>
-                            </constraints>
-                            <nil key="textColor"/>
-                            <textInputTraits key="textInputTraits" returnKeyType="send"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="15"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <outlet property="delegate" destination="-1" id="OdL-kr-R9g"/>
-                            </connections>
-                        </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xe2-M4-hr5">
                             <rect key="frame" x="379" y="10" width="25" height="25"/>
                             <constraints>
@@ -76,19 +59,32 @@
                                 <action selector="emojiAction:" destination="-1" eventType="touchUpInside" id="EBX-IQ-0Tj"/>
                             </connections>
                         </button>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kll-X7-EuA">
+                            <rect key="frame" x="44" y="7.5" width="276" height="30"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="qnR-I2-MhU"/>
+                            </constraints>
+                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="5jQ-QG-BWf"/>
+                            </connections>
+                        </textView>
                     </subviews>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="Kll-X7-EuA" firstAttribute="leading" secondItem="cWW-A4-65L" secondAttribute="trailing" constant="10" id="97s-GD-Vjr"/>
                         <constraint firstItem="Xe2-M4-hr5" firstAttribute="centerY" secondItem="OZb-H1-YMS" secondAttribute="centerY" id="9LA-2f-ztJ"/>
                         <constraint firstItem="cWW-A4-65L" firstAttribute="centerY" secondItem="OZb-H1-YMS" secondAttribute="centerY" id="9ND-Gm-wx1"/>
-                        <constraint firstItem="hdM-RI-BuQ" firstAttribute="centerY" secondItem="OZb-H1-YMS" secondAttribute="centerY" id="MOV-jW-Gxa"/>
+                        <constraint firstItem="Kll-X7-EuA" firstAttribute="centerY" secondItem="OZb-H1-YMS" secondAttribute="centerY" id="Eac-XE-cet"/>
+                        <constraint firstItem="LlO-nY-U7E" firstAttribute="leading" secondItem="Kll-X7-EuA" secondAttribute="trailing" constant="15" id="IHH-TY-Lg8"/>
                         <constraint firstAttribute="trailing" secondItem="Xe2-M4-hr5" secondAttribute="trailing" constant="10" id="PBx-Oa-nWo"/>
                         <constraint firstItem="LlO-nY-U7E" firstAttribute="centerY" secondItem="OZb-H1-YMS" secondAttribute="centerY" id="Rna-Cl-wkN"/>
                         <constraint firstItem="cWW-A4-65L" firstAttribute="leading" secondItem="OZb-H1-YMS" secondAttribute="leading" constant="10" id="ZFV-R9-r7p"/>
                         <constraint firstAttribute="height" constant="45" id="fg4-Pv-V4C"/>
                         <constraint firstItem="Xe2-M4-hr5" firstAttribute="leading" secondItem="LlO-nY-U7E" secondAttribute="trailing" constant="20" id="lqE-Rt-dx9"/>
-                        <constraint firstItem="LlO-nY-U7E" firstAttribute="leading" secondItem="hdM-RI-BuQ" secondAttribute="trailing" constant="15" id="rmn-tz-AVp"/>
-                        <constraint firstItem="hdM-RI-BuQ" firstAttribute="leading" secondItem="cWW-A4-65L" secondAttribute="trailing" constant="10" id="y2O-gd-rAa"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XGo-7w-qx0">

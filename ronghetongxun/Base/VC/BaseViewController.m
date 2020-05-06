@@ -24,6 +24,7 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+
 - (void)setNavigationItem:(NSString *)title imageName:(NSString *)name position:(ItemPosition)position addTarget:(id)target action:(SEL)action{
     
     UIButton *item = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -43,14 +44,14 @@
     }
 }
 
-- (void)setNavigationItemWithButton:(UIButton *)button position:(ItemPosition)position{
+- (void)setNavigationItemWithView:(UIView *)view position:(ItemPosition)position{
     
     switch (position) {
         case itemLeft:
-            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:button];
+            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:view];
             break;
         case itemRight:
-            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:button];
+            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:view];
             break;
         default:
             break;

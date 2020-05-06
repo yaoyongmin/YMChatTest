@@ -9,10 +9,14 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+#import "MJExtension.h"
 #import "UserConfig.h"
 #import "YMRequest.h"
 #import "MBProgressHUD+YM.h"
 #import "YMUtils.h"
+#import "Define.h"
+
+#define kRecoderType @".wav"
 
 #define WeakSelf __weak typeof(self) weakSelf = self;
 

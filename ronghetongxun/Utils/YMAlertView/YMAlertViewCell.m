@@ -41,7 +41,12 @@
     
     [self.itemBtn setTitle:model.content
                   forState:UIControlStateNormal];
-    if (model.imageName.length > 0) {
+    
+    if (model.itemTitleColor) {
+        [self.itemBtn setTitleColor:model.itemTitleColor forState:UIControlStateNormal];
+    }
+    
+    if (model.imageName && model.imageName.length > 0) {
         [self.itemBtn setImage:[UIImage imageNamed:model.imageName]
                       forState:UIControlStateNormal];
         self.itemBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 20, 0, 0);

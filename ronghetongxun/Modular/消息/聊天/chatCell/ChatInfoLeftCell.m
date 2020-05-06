@@ -23,12 +23,12 @@
 }
 - (void)setMessageModel:(ICMessage *)messageModel{
     [super setMessageModel:messageModel];
-
+    
     self.contentLab.text = messageModel.content;
     
     switch (messageModel.deliveryState) {
         case ICMessageDeliveryState_Delivering:
-
+            
             break;
         case ICMessageDeliveryState_Delivered:
             self.activityView.hidden = YES;

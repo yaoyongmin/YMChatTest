@@ -10,7 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BaseModel : NSObject
+@interface BaseModel : NSObject<NSCoding>
+
+@property (nonatomic, strong) NSString *ids;
+
++ (instancetype)model;
 
 @end
 

@@ -30,6 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak)id <YMAlertViewDelegate> delegate;
 
+
 /// 初始化方法
 /// @param title 标题
 /// @param list 内容列表
@@ -38,7 +39,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)show;
 
--(void)show:(UIView *)superView;
+- (void)show:(UIView *)superView;
+
+- (void)dismiss;
 
 @end
 

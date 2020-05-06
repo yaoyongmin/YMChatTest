@@ -11,7 +11,6 @@
 #import <UIView+MJExtension.h>
 #import "UIColor+YM.h"
 #import "CAShapeLayer+ViewMask.h"
-#import "Define.h"
 @interface MessageMoreView()
 {
     BOOL _isShow;

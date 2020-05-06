@@ -9,6 +9,7 @@
 #import "MailListViewController.h"
 #import "LoginViewController.h"
 #import "SocketModel.h"
+#import "JoinMeetingPopupView.h"
 @interface MailListViewController ()
 
 @end
@@ -17,17 +18,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    [[YMRequest sharedManager] postRequest:kGetUserMemeberList params:@{@"memberName":@"",@"pageNum":@(1),@"pageSize":@(10)} success:^(NSInteger code, NSString * _Nullable message, id  _Nullable data) {
+//
+//        NSLog(@"通讯录：%@",data);
+//    } failure:^(NSError * _Nullable error) {
+//
+//    }];
+    
+    JoinMeetingPopupView *joinView = [[JoinMeetingPopupView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth(), kScreenHeight())];
+    joinView.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:joinView];
 }
-
-- (IBAction)testAction:(id)sender {
-    
-    [[SocketModel share] disConnect];
-
-    
-    UIWindow *window = [[UIApplication sharedApplication] keyWindow];
-    
-    window.rootViewController = [[UINavigationController alloc] initWithRootViewController: [[LoginViewController alloc]init]];
-}
-
 
 @end

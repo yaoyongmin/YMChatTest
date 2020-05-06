@@ -23,21 +23,21 @@
 }
 - (void)setMessageModel:(ICMessage *)messageModel{
     [super setMessageModel:messageModel];
-
-    self.contentLab.text = messageModel.content;
     
-     switch (messageModel.deliveryState) {
-           case ICMessageDeliveryState_Delivering:
-               break;
-           case ICMessageDeliveryState_Delivered:
-               self.activityView.hidden = YES;
-               break;
-           case ICMessageDeliveryState_Failure:
-               self.activityView.hidden = YES;
-               break;
-           default:
-               break;
-       }
+    self.contentLab.text = messageModel.content;
+    switch (messageModel.deliveryState) {
+        case ICMessageDeliveryState_Delivering:
+            self.activityView.hidden = NO;
+            break;
+        case ICMessageDeliveryState_Delivered:
+            self.activityView.hidden = YES;
+            break;
+        case ICMessageDeliveryState_Failure:
+            self.activityView.hidden = YES;
+            break;
+        default:
+            break;
+    }
 }
 - (UIView *)getContentView{
     return self.contentLab;

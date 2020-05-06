@@ -21,7 +21,6 @@
 
 #import "MessageViewCell.h"
 #import "MessageMoreView.h"
-#import "Define.h"
 
 #import "YMGroup.h"
 @interface MessageViewController ()<UITableViewDelegate,UITableViewDataSource,MessageMoreViewDelegate>
@@ -32,7 +31,6 @@
 
 @property (strong, nonatomic) MessageMoreView *moreView;
 
-@property (strong, nonatomic) NSMutableArray *dataArray;
 
 @end
 
@@ -48,10 +46,15 @@
                      action:@selector(moreAction)];
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MessageViewCell class]) bundle:nil] forCellReuseIdentifier:@"messageViewCell_id"];
+    self.baseTableView =self.tableView;
+    
+    [self addRefreshHeader:YES];
+}
+
+- (void)getDataList{
     
     [self loadDataSource];
 }
-
 - (void)loadDataSource
 {
     YMGroup *group      = [[YMGroup alloc] init];
@@ -64,9 +67,18 @@
     group1.unReadCount      = 1;
     group1.gName            = @"马云";
     group1.lastMsgString    = @"支付宝到账一个小目标！";
-    group1.gType             = ICGroup_DOUBLE;
+    group1.gType            = ICGroup_DOUBLE;
     [self.dataArray addObject:group];
     [self.dataArray addObject:group1];
+    
+    [self.tableView reloadData];
+    
+    [[YMRequest sharedManager] postRequest:kGetChatList params:@{} success:^(NSInteger code, NSString * _Nullable message, id  _Nullable data) {
+        
+        NSLog(@"聊天列表：%@",data);
+    } failure:^(NSError * _Nullable error) {
+        
+    }];
 }
 
 ///点击右上角更多
@@ -98,7 +110,7 @@
                 group.gName         = @"新建群聊";
                 group.gType         = ICGroup_MULTI;
                 group.lastMsgString = @"新建群聊成功！";
-//                group.userList      = @[];
+                //                group.userList      = @[];
                 [self.dataArray addObject:group];
                 [self.tableView reloadData];
                 
@@ -212,11 +224,4 @@
     return _moreView;
 }
 
-- (NSMutableArray *)dataArray
-{
-    if (nil == _dataArray) {
-        _dataArray = [NSMutableArray array];
-    }
-    return  _dataArray;
-}
 @end

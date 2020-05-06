@@ -35,6 +35,18 @@
     [[SocketModel share] setKHost:@"127.0.0.1"];
     [[SocketModel share] setKPort:6969];
     [[SocketModel share] setKPath:@""];
+}
 
+- (void)applicationDidEnterBackground:(UIApplication *)application{
+    //进入后台，取消一切键盘响应(循环两层，)
+    NSArray *windows =  [[UIApplication sharedApplication] windows];
+    UIWindow *mainWindow = [windows objectAtIndex:0];
+    
+    for (UIView * subView in mainWindow.subviews) {
+        [subView endEditing:NO];
+        for (UIView * subSubView in subView.subviews) {
+            [subSubView endEditing:NO];
+        }
+    }
 }
 @end

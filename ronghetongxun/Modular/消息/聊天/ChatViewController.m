@@ -15,21 +15,25 @@
 #import "ChatVideoLeftCell.h"
 #import "ChatVideoRightCell.h"
 #import "ChatTimeCell.h"
+#import "ChatVoiceLeftCell.h"
+#import "ChatVoiceRightCell.h"
+
+#import "ChatEmojiView.h"
+#import "YMAlertView.h"
 
 #import "UIColor+YM.h"
 #import "NSDate+Extend.h"
 #import "UIView+Extension.h"
 
-#import "ChatEmojiView.h"
-#import "Define.h"
 #import "ChatMoreView.h"
 #import "ZZYPhotoHelper.h"
 #import "ICMessageHelper.h"
+#import "ICRecordManager.h"
 
 #import "ICPhotoBrowserController.h"
 #import "GroupChatInfoVC.h"
 
-@interface ChatViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate,ChatEmojiDelegate,ChatMoreViewDelegate,BaseChatCellDelegate>
+@interface ChatViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate,UITextViewDelegate,ChatEmojiDelegate,ChatMoreViewDelegate,BaseChatCellDelegate,YMAlertViewDelegate>
 {
     NSMutableArray *_dataArray;
     NSArray *_types;
@@ -41,19 +45,26 @@
     UIMenuItem * _addScheduleMenuItem;
     UIMenuItem * _recallMenuItem;
     NSIndexPath *_longIndexPath;
-    
 }
-@property (weak, nonatomic) IBOutlet UITextField *textField;
+
+
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+
+///暂未需求自适应高度
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *textViewHeightLayout;
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *voiceBtn;
 @property (weak, nonatomic) IBOutlet UIButton *emojiBtn;
 @property (strong, nonatomic) UILongPressGestureRecognizer *longPress;
-@property (strong, nonatomic) UITapGestureRecognizer *textFieldTapGes;
+@property (strong, nonatomic) UITapGestureRecognizer *textViewTapGes;
 
 @property (strong, nonatomic) ChatEmojiView *emojiView;
 @property (strong, nonatomic) ChatMoreView *moreView;
+@property (strong, nonatomic) YMAlertView *alertView;
 
 @property (strong, nonatomic) NSMutableArray *dataSource;
+@property (strong, nonatomic) NSTimer *timer;
 
 @end
 
@@ -70,7 +81,7 @@
     
     [self setChatRightItem];
     
-    [self.textField addGestureRecognizer:self.textFieldTapGes];
+    [self.textView addGestureRecognizer:self.textViewTapGes];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
@@ -83,17 +94,17 @@
 - (void)rightItemClickAction{
     
     switch (self.group.gType) {
-           case ICGroup_MULTI:
+        case ICGroup_MULTI:
         {
             [self.navigationController pushViewController:[[GroupChatInfoVC alloc]init] animated:YES];
         }
-               break;
-           case ICGroup_DOUBLE:
+            break;
+        case ICGroup_DOUBLE:
             
-               break;
-           default:
-               break;
-       }
+            break;
+        default:
+            break;
+    }
 }
 
 ///切换语音模式
@@ -102,15 +113,15 @@
     
     if (sender.isSelected) {
         
-        self.textField.placeholder      = @"按住说话";
-        self.textField.textAlignment    = NSTextAlignmentCenter;
-        self.textField.text             = @"";
-        [self.textField resignFirstResponder];
-        [self.textField addGestureRecognizer:self.longPress];
+        self.textView.text          = @"按住说话";
+        self.textView.textAlignment = NSTextAlignmentCenter;
+        
+        [self.textView resignFirstResponder];
+        [self.textView addGestureRecognizer:self.longPress];
     }else{
-        [self.textField removeGestureRecognizer:self.longPress];
-        self.textField.placeholder      = @"";
-        self.textField.textAlignment    = NSTextAlignmentLeft;
+        [self.textView removeGestureRecognizer:self.longPress];
+        self.textView.text          = @"";
+        self.textView.textAlignment = NSTextAlignmentLeft;
     }
 }
 
@@ -119,27 +130,27 @@
     sender.selected = !sender.selected;
     
     if (self.voiceBtn.isSelected) {
-        self.voiceBtn.selected = NO;
-        [self.textField removeGestureRecognizer:self.longPress];
-        self.textField.placeholder      = @"";
-        self.textField.textAlignment    = NSTextAlignmentLeft;
+        self.voiceBtn.selected      = NO;
+        [self.textView removeGestureRecognizer:self.longPress];
+        self.textView.text          = @"";
+        self.textView.textAlignment = NSTextAlignmentLeft;
     }
     
-    if (_keyBoardIsShow && self.textField.inputView == self.emojiView) {
-        [self.textField resignFirstResponder];
+    if (_keyBoardIsShow && self.textView.inputView == self.emojiView) {
+        [self.textView resignFirstResponder];
     }
     
-    if (self.textField.inputView != self.emojiView) {
-        self.textField.inputView = self.emojiView;
-        self.textField.tintColor = [UIColor clearColor];
-        [self.textField reloadInputViews];
+    if (self.textView.inputView != self.emojiView) {
+        self.textView.inputView = self.emojiView;
+        self.textView.tintColor = [UIColor clearColor];
+        [self.textView reloadInputViews];
         if (!_keyBoardIsShow) {
-            [self.textField becomeFirstResponder];
+            [self.textView becomeFirstResponder];
         }
     }else{
         if (!_keyBoardIsShow) {
-            self.textField.tintColor = [UIColor clearColor];
-            [self.textField becomeFirstResponder];
+            self.textView.tintColor = [UIColor clearColor];
+            [self.textView becomeFirstResponder];
         }
     }
 }
@@ -147,27 +158,50 @@
 ///弹出更多功能视图
 - (IBAction)moreAction:(UIButton *)sender {
     sender.selected = !sender.selected;
-    [self.textField resignFirstResponder];
+    [self.textView resignFirstResponder];
     
     [self.moreView show];
 }
 
-///替换掉原有的单击操作
-- (void)textFieldTapPressGestureAction:(UITapGestureRecognizer *)ges{
+- (void)textViewTapPressGestureAction:(UITapGestureRecognizer *)ges{
     
-    if (self.textField.inputView == self.emojiView) {
-        self.textField.inputView = nil;
-        [self.textField reloadInputViews];
-        self.textField.tintColor = [UIColor blackColor];
+    if (self.textView.inputView == self.emojiView) {
+        self.textView.inputView = nil;
+        [self.textView reloadInputViews];
+        self.textView.tintColor = [UIColor blackColor];
     }
-    [self.textField becomeFirstResponder];
+    [self.textView becomeFirstResponder];
     NSLog(@"单击！");
 }
-
 ///长按输入框操作
 - (void)longPressGestureAction:(UILongPressGestureRecognizer *)longPress{
     if (longPress.state == UIGestureRecognizerStateBegan) {
-        NSLog(@"长按！");
+        NSLog(@"长按开始时录音！");
+        
+        [[ICRecordManager shareManager] startRecordingWithFileName:@"chatVoice" completion:^(NSError *error) {
+            
+        }];
+        
+    }
+    if (longPress.state == UIGestureRecognizerStateEnded) {
+        NSLog(@"录音结束发送录音消息！");
+        
+        [[ICRecordManager shareManager] stopRecordingWithCompletion:^(NSString *recordPath) {
+            
+            NSLog(@"录制完成后的路径：%@",recordPath);
+            
+            ///现在测试数据 所有录音占用同一个路径  所以会造成录音数据覆盖 数据一致的情况
+            ///后续对接后台接口逻辑    发送语音文件到后台服务器 服务器返回语音文件url  存储 播放
+            
+            ///录制完成上传 需要转码 amr上传服务器  适配安卓 容量小
+            
+            ICMessage *voiceMsg = [ICMessageHelper createVoiceMessagevoicePath:recordPath from:@"test" to:self.group.gId isSender:YES];
+            
+            [self.dataSource addObject:voiceMsg];
+            [self.tableView reloadData];
+            [self setTableViewPositionAtBottom];
+            [self messageSendSucced:voiceMsg];
+        }];
     }
 }
 
@@ -180,9 +214,8 @@
     _keyBoardIsShow = NO;
 }
 
-#pragma mark textFieldDelegate
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    
+#pragma mark textViewDelegate
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView{
     if (self.voiceBtn.isSelected) {
         return NO;
     }else{
@@ -190,31 +223,37 @@
     }
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [textField resignFirstResponder];
+///判断输入的字是否是回车，即按下return
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
     
-    if (textField.text.length >0) {
+    if ([text isEqualToString:@"\n"]){
+        [textView resignFirstResponder];
         
-        ICMessage *msgRight = [ICMessageHelper createMessageModel:TypeText
-                                                          content:textField.text path:nil
-                                                             from:@"ts"
-                                                               to:self.group.gId
-                                                          fileKey:nil
-                                                         isSender:YES];
-        [self.dataSource addObject:msgRight];
-        [self.tableView reloadData];
-        [self setTableViewPositionAtBottom];
-        [self messageSendSucced:msgRight];
+        if (textView.text.length >0) {
+            
+            ICMessage *msgRight = [ICMessageHelper createMessageModel:TypeText
+                                                              content:textView.text path:nil
+                                                                 from:@"ts"
+                                                                   to:self.group.gId
+                                                              fileKey:nil
+                                                             isSender:YES];
+            [self.dataSource addObject:msgRight];
+            [self.tableView reloadData];
+            [self setTableViewPositionAtBottom];
+            [self messageSendSucced:msgRight];
+        }
+        textView.text = @"";
+        return YES;
     }
-    textField.text = @"";
     return YES;
 }
+
 #pragma mark 点击表情键盘发送按钮事件
 - (void)ChatEmojiViewClickSendButtonAction{
-    [self.textField resignFirstResponder];
-    if (self.textField.text.length >0) {
+    [self.textView resignFirstResponder];
+    if (self.textView.text.length >0) {
         ICMessage *msgRight = [ICMessageHelper createMessageModel:TypeText
-                                                          content:self.textField.text
+                                                          content:self.textView.text
                                                              path:nil
                                                              from:@"ts"
                                                                to:self.group.gId
@@ -230,7 +269,7 @@
         [self setTableViewPositionAtBottom];
         [self messageSendSucced:msgRight];
     }
-    self.textField.text = @"";
+    self.textView.text = @"";
 }
 
 ///模拟网络请求 延迟一秒后  改变发送的消息状态
@@ -263,18 +302,22 @@
 
 #pragma mark config
 - (void)setTableViewPositionAtBottom{
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.005 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        if (self->_dataArray.count>0) {
-            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:([self.tableView numberOfRowsInSection:0]-1) inSection:0];
-            [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:NO];
-        }
-    });
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.dataSource.count-1 inSection:0];
+    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+    
+    //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    //        if (self->_dataArray.count>0) {
+    //            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.dataSource.count-1 inSection:0];
+    //            [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+    //        }
+    //    });
 }
 
 #pragma mark ChatEmojiViewDelegate
 - (void)ChatEmojiView:(nonnull ChatEmojiView *)emojiView didSelectEmojiItemAtText:(nonnull NSString *)emojiText {
     
-    self.textField.text = [NSString stringWithFormat:@"%@%@",self.textField.text,emojiText];
+    self.textView.text = [NSString stringWithFormat:@"%@%@",self.textView.text,emojiText];
 }
 
 #pragma mark - baseCell delegate
@@ -312,7 +355,7 @@
     if (messageModel.isSender) {
         
         [[UIMenuController sharedMenuController] setMenuItems:@[_copyMenuItem,_deleteMenuItem,_forwardMenuItem,_recallMenuItem,_addScheduleMenuItem]];
-
+        
     } else {
         [[UIMenuController sharedMenuController] setMenuItems:@[_copyMenuItem,_deleteMenuItem,_forwardMenuItem,_addScheduleMenuItem]];
     }
@@ -334,10 +377,6 @@
     
     NSLog(@"添加到日程!");
 }
-- (void)recallMessage:(UIMenuItem *)recallMuneItem
-{
-    NSLog(@"撤回");
-}
 - (void)copyMessage:(UIMenuItem *)copyMenuItem
 {
     UIPasteboard *pasteboard  = [UIPasteboard generalPasteboard];
@@ -345,6 +384,21 @@
     pasteboard.string         = message.content;
     
     NSLog(@"复制的内容：%@",pasteboard.string);
+}
+
+- (void)recallMessage:(UIMenuItem *)recallMuneItem{
+    [self.alertView show];
+}
+
+- (void)YMAlertView:(YMAlertView *)alertView didSelectRowAtSEL:(SEL)action{
+    
+    YMPerformSelectorMacro(self, NSStringFromSelector(action));
+}
+
+- (void)recallAction{
+    [self.alertView dismiss];
+    
+    NSLog(@"撤回!");
 }
 
 - (void)deleteMessage:(UIMenuItem *)deleteMenuItem{
@@ -371,7 +425,7 @@
  * @param eventName 事件名称
  * @param userInfo 传递的数据
  */
-#pragma mark 查看图片 播放视频 录音
+#pragma mark 查看图片 播放视频 播放录音
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo{
     
     if ([eventName isEqualToString:YMRouterEventVideoTapEventName]) {
@@ -399,10 +453,21 @@
         [self presentViewController:photoVC animated:YES completion:nil];
     }
     
-    
+    if ([eventName isEqualToString:YMRouterEventVoiceTapEventName]) {
+        
+        ///如果 录音正在播放  则停止 再播放当前点击的录音
+        
+        ///播放如果是接收到的消息  需要转为wav格式 播放 iOS4.3以后不在支持 amr
+        ///安卓 amr  可以直接录制播放
+        
+        NSString *voicePath = userInfo[@"voicePath"];
+        
+        NSLog(@"播放的录音路径%@",voicePath);
+        
+        [[ICRecordManager shareManager] startPlayRecorder:voicePath];
+    }
     NSLog(@"%@",userInfo);
 }
-
 
 #pragma mark ChatMoreViewDelegate
 - (void)ChatMoreView:(ChatMoreView *)moreView didSelectRowAtIndex:(NSInteger)index{
@@ -482,7 +547,6 @@
     cell.longPressDelegate         = self;
     cell.messageModel              = msgModel;
     return cell;
-    
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -502,8 +566,20 @@
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ChatVideoLeftCell class]) bundle:nil] forCellReuseIdentifier:[NSString stringWithFormat:@"%@_left",TypeVideo]];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ChatVideoRightCell class]) bundle:nil] forCellReuseIdentifier:[NSString stringWithFormat:@"%@_right",TypeVideo]];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ChatTimeCell class]) bundle:nil] forCellReuseIdentifier:[NSString stringWithFormat:@"%@",TypeMessageDate]];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ChatVoiceLeftCell class]) bundle:nil] forCellReuseIdentifier:[NSString stringWithFormat:@"%@_left",TypeVoice]];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ChatVoiceRightCell class]) bundle:nil] forCellReuseIdentifier:[NSString stringWithFormat:@"%@_right",TypeVoice]];
 }
 
+- (NSArray <YMAlertModel *>*)getPhoneAlertData{
+    NSMutableArray <YMAlertModel *> *listArray = [NSMutableArray array];
+    YMAlertModel *model = [YMAlertModel new];
+    model.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+    model.itemTitleColor = [UIColor ym_colorFromHexString:@"#3D8BEC"];
+    [model setAction:@selector(recallAction)];
+    [model setValuesForKeysWithDictionary:@{@"content":@"确定"}];
+    [listArray addObject:model];
+    return listArray;
+}
 
 #pragma mark lazy
 - (UILongPressGestureRecognizer *)longPress{
@@ -512,12 +588,12 @@
     }
     return _longPress;
 }
-- (UITapGestureRecognizer *)textFieldTapGes{
+- (UITapGestureRecognizer *)textViewTapGes{
     
-    if (!_textFieldTapGes) {
-        _textFieldTapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(textFieldTapPressGestureAction:)];
+    if (!_textViewTapGes) {
+        _textViewTapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(textViewTapPressGestureAction:)];
     }
-    return _textFieldTapGes;
+    return _textViewTapGes;
 }
 
 - (ChatEmojiView *)emojiView{
@@ -535,10 +611,27 @@
     }
     return _moreView;
 }
+
+- (YMAlertView *)alertView{
+    if (!_alertView) {
+        _alertView = [YMAlertView alertControllerWithTitle:@"是否撤回该条消息？" dataList:[self getPhoneAlertData]];
+        _alertView.delegate = self;
+    }
+    return _alertView;
+}
 - (NSMutableArray *)dataSource{
     if (_dataSource == nil) {
         _dataSource = [NSMutableArray array];
     }
     return _dataSource;
 }
+
+- (NSTimer *)timer
+{
+    if (!_timer) {
+        _timer =[NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(progressChange) userInfo:nil repeats:YES];
+    }
+    return _timer;
+}
+
 @end

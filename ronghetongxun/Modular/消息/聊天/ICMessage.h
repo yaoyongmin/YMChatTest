@@ -37,6 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) UIImage *image;
 // 视频地址
 @property (nonatomic, copy) NSString *videoPath;
+//音频地址
+@property (nonatomic, copy) NSString *voicePath;
 // 音频文件的fileKey
 @property (nonatomic, copy) NSString *fileKey;
 // 发送消息对应的type类型:1,2,3

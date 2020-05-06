@@ -7,7 +7,6 @@
 //
 
 #import "ResetPasswordViewController.h"
-#import "Define.h"
 #import "UIButton+timer.h"
 #import "NSString+XY.h"
 @interface ResetPasswordViewController ()
@@ -45,5 +44,28 @@
 }
 - (IBAction)changedPasswordAction:(id)sender {
     
+    if (self.accountTextField.text.length <=0) {
+        [MBProgressHUD showTextMessage:@"请输入账号！"];
+        return;
+    }
+    if (self.verifiedCodeTextField.text.length <= 0) {
+        
+        [MBProgressHUD showTextMessage:@"请输入验证码！"];
+        return;
+    }
+    if (self.passWordTextField.text.length <= 0) {
+        [MBProgressHUD showTextMessage:@"请输入新密码！"];
+        return;
+    }
+    
+    NSDictionary *params = @{@"":@"",@"":@""};
+    
+    [[YMRequest sharedManager] postRequest:kResetPass params:params success:^(NSInteger code, NSString * _Nullable message, id  _Nullable data) {
+        
+        
+        
+    } failure:^(NSError * _Nullable error) {
+        
+    }];
 }
 @end
